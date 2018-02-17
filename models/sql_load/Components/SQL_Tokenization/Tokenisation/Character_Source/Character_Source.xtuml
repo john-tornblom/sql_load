@@ -1,0 +1,114 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("5083f37f-f724-4f30-b735-4c980b6dc3de",
+	'Character_Source',
+	2,
+	'Character_Source',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("8bacad63-e597-4950-8cb8-f04f87db7fd0",
+	"5083f37f-f724-4f30-b735-4c980b6dc3de",
+	'Next',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'select one file_source related by self->File_Source[R2];
+select one string_source related by self->String_Source[R2];
+
+ch = ASCII_NULL;
+if not_empty file_source
+	ch = file_source.Next();
+	
+elif not_empty string_source
+	ch = string_source.Next();
+end if;
+
+if ch < ASCII_NULL
+	ch = ASCII_NULL;
+	
+elif ch > ASCII_NULL
+	self.position = self.position + 1;
+end if;
+
+return ch;
+',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_TFR
+	VALUES ("b9382081-1c2f-46d2-b3c3-b62657ad9ae4",
+	"5083f37f-f724-4f30-b735-4c980b6dc3de",
+	'Destroy',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'select one tokenizer related by self->Tokenizer[R1];
+if not_empty tokenizer
+	unrelate self from tokenizer across R1;
+end if;
+
+select one file_source related by self->File_Source[R2];
+if not_empty file_source
+	if file_source.fd != ILLEGAL_FILE_DESCRIPTOR
+		_ = FS::Close( fd: file_source.fd);
+	end if;
+	unrelate self from file_source across R2;
+	delete object instance file_source;
+end if;
+
+select one string_source related by self->String_Source[R2];
+if not_empty string_source
+	unrelate self from string_source across R2;
+	delete object instance string_source;
+end if;
+
+delete object instance self;
+',
+	1,
+	'',
+	"8bacad63-e597-4950-8cb8-f04f87db7fd0",
+	0);
+INSERT INTO O_NBATTR
+	VALUES ("b6a98e79-7da9-43e9-93bc-0caed70e79d3",
+	"5083f37f-f724-4f30-b735-4c980b6dc3de");
+INSERT INTO O_BATTR
+	VALUES ("b6a98e79-7da9-43e9-93bc-0caed70e79d3",
+	"5083f37f-f724-4f30-b735-4c980b6dc3de");
+INSERT INTO O_ATTR
+	VALUES ("b6a98e79-7da9-43e9-93bc-0caed70e79d3",
+	"5083f37f-f724-4f30-b735-4c980b6dc3de",
+	"00000000-0000-0000-0000-000000000000",
+	'position',
+	'',
+	'',
+	'position',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"5083f37f-f724-4f30-b735-4c980b6dc3de");
+INSERT INTO O_ID
+	VALUES (1,
+	"5083f37f-f724-4f30-b735-4c980b6dc3de");
+INSERT INTO O_ID
+	VALUES (2,
+	"5083f37f-f724-4f30-b735-4c980b6dc3de");
+INSERT INTO PE_PE
+	VALUES ("5083f37f-f724-4f30-b735-4c980b6dc3de",
+	1,
+	"25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'Tokenisation',
+	'',
+	0,
+	'../Tokenisation.xtuml');

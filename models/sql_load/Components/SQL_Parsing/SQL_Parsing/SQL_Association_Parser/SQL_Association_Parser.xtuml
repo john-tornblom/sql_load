@@ -1,0 +1,88 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	'SQL_Association_Parser',
+	9908,
+	'SQL_Association_Parser',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_REF
+	VALUES ("64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	"bdb3488b-014f-4b70-967b-f45bbc43c7b9",
+	0,
+	"3991096a-4345-4cdb-9f42-a0033564de25",
+	"554627cb-93f5-49ff-a92c-8a6dff26c23d",
+	"a5956f72-d629-4cf4-8130-92a2ba1257f8",
+	"bc751fef-5862-45ba-8f95-dfcf1fc1eef7",
+	"bb0b587b-2c16-40b8-8d87-54168a16efad",
+	"a7919f37-85a6-4507-bf3d-938eb0c4362a",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'SQL_Statement_Parser',
+	'id',
+	'R9909');
+INSERT INTO R_RGO_PROXY
+	VALUES ("64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	"554627cb-93f5-49ff-a92c-8a6dff26c23d",
+	"a5956f72-d629-4cf4-8130-92a2ba1257f8",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("3991096a-4345-4cdb-9f42-a0033564de25",
+	"bdb3488b-014f-4b70-967b-f45bbc43c7b9",
+	0,
+	"554627cb-93f5-49ff-a92c-8a6dff26c23d",
+	"bc751fef-5862-45ba-8f95-dfcf1fc1eef7",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("bb0b587b-2c16-40b8-8d87-54168a16efad",
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	"3991096a-4345-4cdb-9f42-a0033564de25",
+	"bdb3488b-014f-4b70-967b-f45bbc43c7b9",
+	1,
+	'id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("3991096a-4345-4cdb-9f42-a0033564de25",
+	"bdb3488b-014f-4b70-967b-f45bbc43c7b9",
+	'../SQL_Statement_Parser/SQL_Statement_Parser.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("bb0b587b-2c16-40b8-8d87-54168a16efad",
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	"00000000-0000-0000-0000-000000000000",
+	'id',
+	'',
+	'',
+	'id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969");
+INSERT INTO O_OIDA
+	VALUES ("bb0b587b-2c16-40b8-8d87-54168a16efad",
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	0,
+	'id');
+INSERT INTO O_ID
+	VALUES (1,
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969");
+INSERT INTO O_ID
+	VALUES (2,
+	"64ec0896-2eb3-4b78-9055-bd10f15b3969");
+INSERT INTO PE_PE
+	VALUES ("64ec0896-2eb3-4b78-9055-bd10f15b3969",
+	1,
+	"51534a6b-f841-4c59-8fec-7aa671c00319",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("51534a6b-f841-4c59-8fec-7aa671c00319",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'SQL_Parsing',
+	'',
+	9900,
+	'../SQL_Parsing.xtuml');

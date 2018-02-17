@@ -1,0 +1,165 @@
+-- BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO SM_ISM
+	VALUES ("fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"bdb3488b-014f-4b70-967b-f45bbc43c7b9");
+INSERT INTO SM_SM
+	VALUES ("fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES ("fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b");
+INSERT INTO SM_EVTDI
+	VALUES ("6a23feb9-ea25-4969-a6eb-b7d40118194d",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	'name',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	"10e27754-2741-4eb8-876a-7063b6bc1ee8",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_EVTDI
+	VALUES ("86d4402f-7e3f-49ea-8297-8304e4068cac",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	'id',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	'',
+	"555a2619-0146-485b-b2a4-bb37a1e87580",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO SM_PEVT
+	VALUES ("10e27754-2741-4eb8-876a-7063b6bc1ee8",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Identifier');
+INSERT INTO SM_EVT
+	VALUES ("10e27754-2741-4eb8-876a-7063b6bc1ee8",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	1,
+	'Identifier',
+	0,
+	'',
+	'SQL_Statement_Parser1',
+	'');
+INSERT INTO SM_PEVT
+	VALUES ("0763887b-60ca-4350-8a7d-4f9ec63f816c",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Left_Parenthesis');
+INSERT INTO SM_EVT
+	VALUES ("0763887b-60ca-4350-8a7d-4f9ec63f816c",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	2,
+	'Left_Parenthesis',
+	0,
+	'',
+	'SQL_Statement_Parser2',
+	'');
+INSERT INTO SM_PEVT
+	VALUES ("abc8295e-a59b-4809-8664-546afa96dde4",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Right_Parenthesis');
+INSERT INTO SM_EVT
+	VALUES ("abc8295e-a59b-4809-8664-546afa96dde4",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	3,
+	'Right_Parenthesis',
+	0,
+	'',
+	'SQL_Statement_Parser3',
+	'');
+INSERT INTO SM_PEVT
+	VALUES ("dfc932a5-4632-49c9-a3f8-3b132fa86544",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Comma');
+INSERT INTO SM_EVT
+	VALUES ("dfc932a5-4632-49c9-a3f8-3b132fa86544",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	4,
+	'Comma',
+	0,
+	'',
+	'SQL_Statement_Parser4',
+	'');
+INSERT INTO SM_PEVT
+	VALUES ("555a2619-0146-485b-b2a4-bb37a1e87580",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Value');
+INSERT INTO SM_EVT
+	VALUES ("555a2619-0146-485b-b2a4-bb37a1e87580",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	5,
+	'Value',
+	0,
+	'',
+	'SQL_Statement_Parser5',
+	'');
+INSERT INTO SM_PEVT
+	VALUES ("515a0f20-9aef-4f2a-b1d3-d286dc324d21",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Statement_Parser',
+	'SQL_Statement_Parser',
+	'Semicolon');
+INSERT INTO SM_EVT
+	VALUES ("515a0f20-9aef-4f2a-b1d3-d286dc324d21",
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	"00000000-0000-0000-0000-000000000000",
+	6,
+	'Semicolon',
+	0,
+	'',
+	'SQL_Statement_Parser6',
+	'');
+INSERT INTO GD_MD
+	VALUES ("08bc22a3-66d9-46aa-b67b-15a55764b6b7",
+	8,
+	"fa0adfe6-f4b7-4cd9-bc58-2ee7d7c4ab1b",
+	40,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'sql_load::Components::SQL_Parsing::SQL_Parsing::SQL_Statement_Parser::Instance State Machine');
+INSERT INTO DIM_DIA
+	VALUES ("08bc22a3-66d9-46aa-b67b-15a55764b6b7",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("bdb3488b-014f-4b70-967b-f45bbc43c7b9",
+	'SQL_Statement_Parser',
+	9910,
+	'SQL_Statement_Parser',
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'../SQL_Statement_Parser.xtuml');

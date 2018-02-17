@@ -1,0 +1,410 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Tokenizer',
+	1,
+	'Tokenizer',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("8c4dde90-f33b-4e02-b29a-afc3cc310772",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Scan',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'ch = self.la;
+select one character_source related by self->Character_Source[R1];
+self.la = character_source.Next();
+return ch;
+',
+	1,
+	'',
+	"9c5a41db-b2ed-4f8c-941e-a62daac08700",
+	0);
+INSERT INTO O_TFR
+	VALUES ("9c5a41db-b2ed-4f8c-941e-a62daac08700",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Next',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'self.Skip_Blanks();
+
+if self.Accept_End_Of_Stream()
+	return false;
+end if;
+
+if self.Accept_String()
+	return true;
+end if;
+
+if self.Accept_Unique_Id()
+	return true;
+end if;
+
+if self.Accept_Punctuation()
+	return true;
+end if;
+
+if self.Accept_Number(negative: false)
+	return true;
+end if;
+
+if self.Accept_Comment_Or_Negative_Number()
+	return true;
+end if;
+
+if self.Accept_Identifier()
+	return true;
+end if;
+
+select one character_source related by self->Character_Source[R1];
+PROC::Assert(cond: false, msg: "syntax error while scanning character with ASCII code " + 
+								STR::From_Integer( value: self.la) + " at index " + 
+								STR::From_Integer( value: character_source.position));
+return false;
+',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_TFR
+	VALUES ("3b92daf7-1279-40cd-aa63-1f653a83e45a",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Skip',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'_ = self.Scan();',
+	1,
+	'',
+	"66ed4739-24f2-46c7-aa62-2ef27273b84d",
+	0);
+INSERT INTO O_TFR
+	VALUES ("a8138b83-3a7d-4f6d-bc33-92a198291aa4",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Is_Digit',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'return (self.la >= ASCII_DIGIT_ZERO and 
+		self.la <= ASCII_DIGIT_NINE);
+',
+	1,
+	'',
+	"8c4dde90-f33b-4e02-b29a-afc3cc310772",
+	0);
+INSERT INTO O_TFR
+	VALUES ("9a578dac-89ca-4380-9351-8952dbe565c3",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Is_Letter',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'return (self.la >= ASCII_LATIN_CAPITAL_LETTER_A and 
+		self.la <= ASCII_LATIN_CAPITAL_LETTER_Z) or
+	   (self.la >= ASCII_LATIN_SMALL_LETTER_A and 
+	    self.la <= ASCII_LATIN_SMALL_LETTER_Z);',
+	1,
+	'',
+	"a8138b83-3a7d-4f6d-bc33-92a198291aa4",
+	0);
+INSERT INTO O_TFR
+	VALUES ("66ed4739-24f2-46c7-aa62-2ef27273b84d",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Is_Whitespace',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'return (self.la == ASCII_SPACE or 
+		self.la == ASCII_HORIZONTAL_TAB or 
+		self.la == ASCII_CARRIAGE_RETURN or
+		self.la == ASCII_LINE_FEED);
+		',
+	1,
+	'',
+	"9a578dac-89ca-4380-9351-8952dbe565c3",
+	0);
+INSERT INTO O_TFR
+	VALUES ("663445cd-ba98-4584-a141-16a87a7fc9df",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_String',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'value = "";
+
+if self.la != ASCII_APOSTROPHE
+	return false;
+end if;
+
+length = 0;
+while self.la == ASCII_APOSTROPHE
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+	
+	while self.la != ASCII_APOSTROPHE and self.la != ASCII_NULL;
+		value = value + STR::From_ASCII_Code(code: self.Scan());
+		length = length + 1;
+	end while;
+	
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+	length = length + 2;
+end while;
+
+value = STR::Substring(str: value, start: 1, end: length-1);
+value = STR::Replace(str: value, old:"''''", new: "''");
+
+Output::String(value: value);
+return true;
+',
+	1,
+	'',
+	"b94bb870-1c68-43bd-922a-6b6af98a7674",
+	0);
+INSERT INTO O_TFR
+	VALUES ("8b2de10d-c7aa-4498-916c-0c73054e3b66",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_Unique_Id',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'value = "";
+
+if self.la != ASCII_QUOTATION_MARK
+	return false;
+end if;
+self.Skip();
+
+while self.la != ASCII_QUOTATION_MARK and self.la != ASCII_NULL
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+end while;
+	
+PROC::Assert(cond: self.la == ASCII_QUOTATION_MARK, msg: "syntax error while scanning unique_id");
+self.Skip();
+	
+Output::Unique_Id(value: STR::To_Unique_Id( value: value));
+return true;
+',
+	1,
+	'',
+	"663445cd-ba98-4584-a141-16a87a7fc9df",
+	0);
+INSERT INTO O_TFR
+	VALUES ("b94bb870-1c68-43bd-922a-6b6af98a7674",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_End_Of_Stream',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'if self.la <= ASCII_NULL
+	Output::End_Of_Stream();
+	return true;
+end if;
+
+return false;
+',
+	1,
+	'',
+	"2d11b971-a434-4db9-b72f-0712f342111a",
+	0);
+INSERT INTO O_TFR
+	VALUES ("2d11b971-a434-4db9-b72f-0712f342111a",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Skip_Blanks',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'while self.Is_Whitespace() and self.la != ASCII_NULL
+	self.Skip();
+end while;
+',
+	1,
+	'',
+	"3b92daf7-1279-40cd-aa63-1f653a83e45a",
+	0);
+INSERT INTO O_TFR
+	VALUES ("6df2e067-70dd-49bc-b174-433fa08a5a75",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_Number',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'if not self.Is_Digit()
+	return false;
+end if;
+
+dot = false;
+value = "";
+while self.Is_Digit() or self.la == ASCII_FULL_STOP
+	consecutive_dots = dot and self.la == ASCII_FULL_STOP;
+	PROC::Assert(cond: not consecutive_dots, msg: "syntax error while scanning number");
+	dot = dot or self.la == ASCII_FULL_STOP;
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+end while;
+
+if dot
+	real = STR::To_Real(value: value);
+	if param.negative
+		real = -real;
+	end if;
+	Output::Real(value: real);
+else
+	integer = STR::To_Integer(value: value);
+	if param.negative
+		integer = -integer;
+	end if;
+	Output::Integer(value: integer);
+end if;
+
+return true;
+',
+	1,
+	'',
+	"5cbf7bef-a8f5-4b1e-9f67-c2ab74c1401e",
+	0);
+INSERT INTO O_TPARM
+	VALUES ("a805cb94-051b-445e-805a-b9f062fb2705",
+	"6df2e067-70dd-49bc-b174-433fa08a5a75",
+	'negative',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO O_TFR
+	VALUES ("f6c471d1-ab7b-4361-aae5-c737417a79f3",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_Comment_Or_Negative_Number',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	' value = "";
+ 
+ if self.la != ASCII_HYPHEN_MINUS
+ 	return false;
+ end if;
+  
+self.Skip();
+ if self.la == ASCII_HYPHEN_MINUS
+ 	self.Skip();
+ 	
+ 	while self.la != ASCII_CARRIAGE_RETURN and self.la != ASCII_LINE_FEED and self.la != ASCII_NULL
+		value = value + STR::From_ASCII_Code(code: self.Scan());
+	end while;
+		
+ 	Output::Comment(value: value);
+	return true;
+ end if;
+ 
+if self.Accept_Number(negative: true)
+	return true;
+end if;
+
+PROC::Assert(cond: false, msg: "syntax error while scanning comment or negative number");
+return false;
+',
+	1,
+	'',
+	"6df2e067-70dd-49bc-b174-433fa08a5a75",
+	0);
+INSERT INTO O_TFR
+	VALUES ("4a743091-ade3-4ed5-9d8a-53f23b97f193",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_Identifier',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'value = "";
+
+if not self.Is_Letter() and self.la != ASCII_LOW_LINE
+	return false;
+end if;
+
+while self.Is_Letter() or self.Is_Digit() or self.la == ASCII_LOW_LINE
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+end while;
+
+Output::Identifier(name: value);
+return true;',
+	1,
+	'',
+	"f6c471d1-ab7b-4361-aae5-c737417a79f3",
+	0);
+INSERT INTO O_TFR
+	VALUES ("5cbf7bef-a8f5-4b1e-9f67-c2ab74c1401e",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	'Accept_Punctuation',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'if self.la == ASCII_COMMA
+	self.Skip();
+	Output::Comma();
+	return true;
+
+elif self.la == ASCII_RIGHT_PARENTHESIS
+	self.Skip();
+	Output::Right_Parenthesis();
+	return true;
+
+elif self.la == ASCII_LEFT_PARENTHESIS
+	self.Skip();
+	Output::Left_Parenthesis();
+	return true;
+
+elif self.la == ASCII_SEMICOLON
+	self.Skip();
+	Output::Semicolon();
+	return true;
+
+else
+	return false;
+end if;
+',
+	1,
+	'',
+	"8b2de10d-c7aa-4498-916c-0c73054e3b66",
+	0);
+INSERT INTO O_NBATTR
+	VALUES ("2e4a105e-fb81-4cbe-84ac-adfdbc500c29",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917");
+INSERT INTO O_BATTR
+	VALUES ("2e4a105e-fb81-4cbe-84ac-adfdbc500c29",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917");
+INSERT INTO O_ATTR
+	VALUES ("2e4a105e-fb81-4cbe-84ac-adfdbc500c29",
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	"00000000-0000-0000-0000-000000000000",
+	'la',
+	'',
+	'',
+	'la',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917");
+INSERT INTO O_ID
+	VALUES (1,
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917");
+INSERT INTO O_ID
+	VALUES (2,
+	"62f05c3b-9b60-42d1-a323-f1e2776a5917");
+INSERT INTO PE_PE
+	VALUES ("62f05c3b-9b60-42d1-a323-f1e2776a5917",
+	1,
+	"25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'Tokenisation',
+	'',
+	0,
+	'../Tokenisation.xtuml');

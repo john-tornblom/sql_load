@@ -1,0 +1,181 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'SQL_Synchronization',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
+	112,
+	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'4.1.17',
+	'sql_load::Components::SQL_Parsing::SQL_Synchronization');
+INSERT INTO DIM_DIA
+	VALUES ("221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("01280d73-a349-4da3-8aee-d6d9580a178a",
+	"00000000-0000-0000-0000-000000000000",
+	'play',
+	'',
+	'select many sql_instances from instances of SQL_Instance;
+for each sql_instance in sql_instances
+	Instance_Stream::Instance(id: sql_instance.id,
+							  key_letter: sql_instance.class_name);
+end for;
+
+select many sql_integers from instances of SQL_Integer;
+for each sql_integer in sql_integers
+	Instance_Stream::Integer(instance_id: sql_integer.instance_id,
+							 name: sql_integer.attribute_name, 
+							 value: sql_integer.value);
+end for;
+
+select many sql_reals from instances of SQL_Real;
+for each sql_real in sql_reals
+	Instance_Stream::Real(instance_id: sql_real.instance_id,
+						  name: sql_real.attribute_name,
+						  value: sql_real.value);
+end for;
+
+select many sql_strings from instances of SQL_String;
+for each sql_string in sql_strings
+	Instance_Stream::String(instance_id: sql_string.instance_id,
+							name: sql_string.attribute_name,
+							value: sql_string.value);
+end for;
+
+select many sql_unique_ids from instances of SQL_Unique_Id;
+for each sql_unique_id in sql_unique_ids
+	Instance_Stream::Unique_Id(instance_id: sql_unique_id.instance_id,
+							   name: sql_unique_id.attribute_name,
+							   value: sql_unique_id.value);
+end for;
+
+select many sql_associations from instances of SQL_Association;
+for each sql_association in sql_associations
+	select one sql_from_link related by sql_association->SQL_From_Link[R9];
+	select one sql_to_link related by sql_association->SQL_To_Link[R10];
+	select many sql_from_instances related by sql_from_link->SQL_Link[R8]->SQL_Class[R11]->SQL_Instance[R3];
+	select many sql_to_instances related by sql_to_link->SQL_Link[R8]->SQL_Class[R11]->SQL_Instance[R3];
+	
+	for each sql_from_instance in sql_from_instances
+		for each sql_to_instance in sql_to_instances
+			if ::check(from_id: sql_from_instance.id, to_id: sql_to_instance.id, 
+					   rel_id: sql_association.rel_id, phrase: sql_association.from_phrase)
+				Instance_Stream::Connection(from_id: sql_from_instance.id, 
+											to_id: sql_to_instance.id, 
+					   						rel_id: sql_association.rel_id, 
+					   						phrase: sql_association.from_phrase);
+			end if;
+		end for;
+	end for;
+end for;
+
+
+',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("01280d73-a349-4da3-8aee-d6d9580a178a",
+	1,
+	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("d4ecd38a-e616-4187-a22b-176409fddf38",
+	"00000000-0000-0000-0000-000000000000",
+	'check',
+	'',
+	'//TODO
+return false;',
+	"ba5eda7a-def5-0000-0000-000000000001",
+	1,
+	'',
+	0);
+INSERT INTO S_SPARM
+	VALUES ("8b5de7bf-5eb4-43cd-9885-4e7ce7706d3e",
+	"d4ecd38a-e616-4187-a22b-176409fddf38",
+	'from_id',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("3019032c-11b4-4746-ac5c-ebd688b7e5f6",
+	"d4ecd38a-e616-4187-a22b-176409fddf38",
+	'to_id',
+	"ba5eda7a-def5-0000-0000-000000000005",
+	0,
+	'',
+	"8b5de7bf-5eb4-43cd-9885-4e7ce7706d3e",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("e31fc80a-08ad-432f-92cb-f99b113d10fc",
+	"d4ecd38a-e616-4187-a22b-176409fddf38",
+	'rel_id',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"3019032c-11b4-4746-ac5c-ebd688b7e5f6",
+	'');
+INSERT INTO S_SPARM
+	VALUES ("e5ddbb9a-1327-48ba-8b0b-4d0886a41d9a",
+	"d4ecd38a-e616-4187-a22b-176409fddf38",
+	'phrase',
+	"ba5eda7a-def5-0000-0000-000000000004",
+	0,
+	'',
+	"e31fc80a-08ad-432f-92cb-f99b113d10fc",
+	'');
+INSERT INTO PE_PE
+	VALUES ("d4ecd38a-e616-4187-a22b-176409fddf38",
+	1,
+	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"87713dd9-6486-4d1b-ab2c-50cc800cf593",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("87713dd9-6486-4d1b-ab2c-50cc800cf593",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'SQL_Parsing',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../SQL_Parsing.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'sql_load',
+	1,
+	'../../../sql_load.xtuml');

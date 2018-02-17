@@ -1,0 +1,64 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("dfe861cc-b4db-4d58-8f49-60c31a067462",
+	'String_Source',
+	4,
+	'String_Source',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("4f7c3f6a-85d6-40b3-bc24-5604345087a5",
+	"dfe861cc-b4db-4d58-8f49-60c31a067462",
+	'Next',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'select one character_source related by self->Character_Source[R2];
+return STR::To_ASCII_Code(str: self.value, index: character_source.position);
+',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_NBATTR
+	VALUES ("17b602c5-578b-4f05-8770-01e192753829",
+	"dfe861cc-b4db-4d58-8f49-60c31a067462");
+INSERT INTO O_BATTR
+	VALUES ("17b602c5-578b-4f05-8770-01e192753829",
+	"dfe861cc-b4db-4d58-8f49-60c31a067462");
+INSERT INTO O_ATTR
+	VALUES ("17b602c5-578b-4f05-8770-01e192753829",
+	"dfe861cc-b4db-4d58-8f49-60c31a067462",
+	"00000000-0000-0000-0000-000000000000",
+	'value',
+	'',
+	'',
+	'value',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"dfe861cc-b4db-4d58-8f49-60c31a067462");
+INSERT INTO O_ID
+	VALUES (1,
+	"dfe861cc-b4db-4d58-8f49-60c31a067462");
+INSERT INTO O_ID
+	VALUES (2,
+	"dfe861cc-b4db-4d58-8f49-60c31a067462");
+INSERT INTO PE_PE
+	VALUES ("dfe861cc-b4db-4d58-8f49-60c31a067462",
+	1,
+	"25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'Tokenisation',
+	'',
+	0,
+	'../Tokenisation.xtuml');

@@ -1,0 +1,76 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5",
+	'File_Source',
+	3,
+	'File_Source',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_TFR
+	VALUES ("95e973d0-5c3b-447b-83fc-4831bb288fa1",
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5",
+	'Next',
+	'',
+	"ba5eda7a-def5-0000-0000-000000000002",
+	1,
+	'str = FS::Read(fd: self.fd, length: 1);
+return STR::To_ASCII_Code(str: str, index: 0);
+',
+	1,
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	0);
+INSERT INTO O_NBATTR
+	VALUES ("cb30c71e-e63a-4656-9f35-9d9532fc04ec",
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5");
+INSERT INTO O_BATTR
+	VALUES ("cb30c71e-e63a-4656-9f35-9d9532fc04ec",
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5");
+INSERT INTO O_ATTR
+	VALUES ("cb30c71e-e63a-4656-9f35-9d9532fc04ec",
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5",
+	"00000000-0000-0000-0000-000000000000",
+	'fd',
+	'',
+	'',
+	'fd',
+	0,
+	"1507374d-4668-4da6-9729-aa71f4a270af",
+	'',
+	'');
+INSERT INTO S_DT_PROXY
+	VALUES ("1507374d-4668-4da6-9729-aa71f4a270af",
+	"00000000-0000-0000-0000-000000000000",
+	'File_Descriptor',
+	'',
+	'',
+	'../../../../../../../mc_stdlib/models/mc_stdlib/MC_Standard_Library/MC_Standard_Library.xtuml');
+INSERT INTO O_ID
+	VALUES (0,
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5");
+INSERT INTO O_OIDA
+	VALUES ("cb30c71e-e63a-4656-9f35-9d9532fc04ec",
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5",
+	0,
+	'fd');
+INSERT INTO O_ID
+	VALUES (1,
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5");
+INSERT INTO O_ID
+	VALUES (2,
+	"b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5");
+INSERT INTO PE_PE
+	VALUES ("b417a42c-fdfc-4e0d-b7c0-d30c89faa0e5",
+	1,
+	"25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("25633322-e1df-408b-90be-1ae3c4a3d922",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'Tokenisation',
+	'',
+	0,
+	'../Tokenisation.xtuml');

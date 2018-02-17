@@ -1,0 +1,63 @@
+-- BP 7.1.6 content: Interface syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO C_I
+	VALUES ("09a35036-dc67-4be0-991d-26e9efcdea33",
+	"00000000-0000-0000-0000-000000000000",
+	'Character_Stream',
+	'');
+INSERT INTO C_EP
+	VALUES ("8a3f1fe8-30c1-4ad8-a0c7-ad4a34eed8b1",
+	"09a35036-dc67-4be0-991d-26e9efcdea33",
+	-1,
+	'String',
+	'');
+INSERT INTO C_AS
+	VALUES ("8a3f1fe8-30c1-4ad8-a0c7-ad4a34eed8b1",
+	'String',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_PP
+	VALUES ("2be4370e-0148-48a7-ada9-f3632a31a782",
+	"8a3f1fe8-30c1-4ad8-a0c7-ad4a34eed8b1",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'value',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("d702798f-1fd3-4f0e-9263-cbec087e990b",
+	"09a35036-dc67-4be0-991d-26e9efcdea33",
+	-1,
+	'File',
+	'');
+INSERT INTO C_AS
+	VALUES ("d702798f-1fd3-4f0e-9263-cbec087e990b",
+	'File',
+	'',
+	0,
+	"8a3f1fe8-30c1-4ad8-a0c7-ad4a34eed8b1");
+INSERT INTO C_PP
+	VALUES ("b1525217-344d-40c9-88f5-de7dba5c17d5",
+	"d702798f-1fd3-4f0e-9263-cbec087e990b",
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'path',
+	'',
+	0,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO PE_PE
+	VALUES ("09a35036-dc67-4be0-991d-26e9efcdea33",
+	1,
+	"da0be16f-879e-4c12-b2a7-889906d35c7b",
+	"00000000-0000-0000-0000-000000000000",
+	6);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("da0be16f-879e-4c12-b2a7-889906d35c7b",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'Interfaces',
+	'',
+	0,
+	'../Interfaces.xtuml');
