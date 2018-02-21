@@ -166,6 +166,29 @@ INSERT INTO O_ATTR
 	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
 	'');
+INSERT INTO O_DBATTR
+	VALUES ("b3f93564-3028-4327-b8f2-b159c9e124d9",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	'select any sql_from_link related by self->SQL_Link[R7]->SQL_From_Link[R8];
+self.is_referential = not_empty sql_from_link;
+',
+	1,
+	0);
+INSERT INTO O_BATTR
+	VALUES ("b3f93564-3028-4327-b8f2-b159c9e124d9",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61");
+INSERT INTO O_ATTR
+	VALUES ("b3f93564-3028-4327-b8f2-b159c9e124d9",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	"a327a1d4-5bc2-457b-bd91-d819d5a39880",
+	'is_referential',
+	'',
+	'',
+	'is_referential',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"01cb4ed3-795c-4051-8d34-4b351f54ef61");
