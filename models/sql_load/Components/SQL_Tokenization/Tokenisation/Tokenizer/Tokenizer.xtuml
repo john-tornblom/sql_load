@@ -245,7 +245,15 @@ while self.Is_Digit() or self.la == ASCII_FULL_STOP
 	value = value + STR::From_ASCII_Code(code: self.Scan());
 end while;
 
-if dot
+//Hack for cardinality syntax ''1C''
+if self.la == ASCII_LATIN_CAPITAL_LETTER_C and value == "1" and not param.negative
+	value = value + STR::From_ASCII_Code(code: self.Scan());
+	Output::Identifier(name: value);
+
+elif self.Is_Letter()
+	PROC::Assert(cond: false, msg: "syntax error while scanning number");
+	
+elif dot
 	real = STR::To_Real(value: value);
 	if param.negative
 		real = -real;
