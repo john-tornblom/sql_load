@@ -118,11 +118,12 @@ INSERT INTO O_TFR
 	'',
 	"ba5eda7a-def5-0000-0000-000000000001",
 	1,
-	'return (self.la == ASCII_SPACE or 
-		self.la == ASCII_HORIZONTAL_TAB or 
+	'return (self.la == ASCII_SPACE or
+		self.la == ASCII_HORIZONTAL_TAB or
+		self.la == ASCII_VERTICAL_TAB or
+		self.la == ASCII_FORM_FEED or
 		self.la == ASCII_CARRIAGE_RETURN or
-		self.la == ASCII_LINE_FEED);
-		',
+		self.la == ASCII_LINE_FEED);',
 	1,
 	'',
 	"9a578dac-89ca-4380-9351-8952dbe565c3",
