@@ -317,7 +317,7 @@ INSERT INTO GD_GE
 	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
 	108,
 	0,
-	'sql_load::Components::SQL_Parsing::SQL_Synchronisation');
+	'sql_load::Components::SQL_Parsing::SQL_Synchronization');
 INSERT INTO GD_SHP
 	VALUES ("51d41668-1862-49d5-a4b8-d7fc9c72491e");
 INSERT INTO GD_NCS
@@ -581,111 +581,129 @@ INSERT INTO C_R
 	'Unnamed Interface',
 	'SQL_Parsing::Instance_Stream::SQL_Instance_Stream');
 INSERT INTO SPR_REP
-	VALUES ("6f3ce01b-1adc-4f8c-bef3-b6662763bef8",
-	"7af98dd5-148e-4781-83d4-60d0b1c2c809",
+	VALUES ("73adbff0-bd75-41e8-9ce1-412f24cf7e81",
+	"7725afda-5143-482e-afb1-12ca3f8a605c",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("6f3ce01b-1adc-4f8c-bef3-b6662763bef8",
-	'Instance',
+INSERT INTO SPR_RO
+	VALUES ("73adbff0-bd75-41e8-9ce1-412f24cf7e81",
+	'End_Of_Stream',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("7af98dd5-148e-4781-83d4-60d0b1c2c809",
+	VALUES ("7725afda-5143-482e-afb1-12ca3f8a605c",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Instance',
+	'End_Of_Stream',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
-	VALUES ("4c4a95bf-7942-4a78-a966-6b17bd161d2d",
-	"2e20fecc-5f52-457b-bf3a-4ba1534886d6",
+	VALUES ("7cc082f7-fae7-4b2f-a502-6c1fe3ec9be5",
+	"f3fdb84b-9a2d-458f-b0c2-3084e28fb912",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("4c4a95bf-7942-4a78-a966-6b17bd161d2d",
-	'Connection',
+INSERT INTO SPR_RO
+	VALUES ("7cc082f7-fae7-4b2f-a502-6c1fe3ec9be5",
+	'New',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("2e20fecc-5f52-457b-bf3a-4ba1534886d6",
+	VALUES ("f3fdb84b-9a2d-458f-b0c2-3084e28fb912",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Connection',
+	'New',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
-	VALUES ("1d03abb4-cd96-460d-8547-152563e4144f",
-	"bee5bbc3-be55-4771-9699-a299cf80d273",
+	VALUES ("366a9cf1-9cc6-47b9-ac6b-264e41247684",
+	"b4ae3ff9-ce35-40c5-a48f-ec54e1b3637a",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("1d03abb4-cd96-460d-8547-152563e4144f",
-	'Integer',
+INSERT INTO SPR_RO
+	VALUES ("366a9cf1-9cc6-47b9-ac6b-264e41247684",
+	'Relate',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("bee5bbc3-be55-4771-9699-a299cf80d273",
+	VALUES ("b4ae3ff9-ce35-40c5-a48f-ec54e1b3637a",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Integer',
+	'Relate',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
-	VALUES ("a81fa94f-eac7-4b24-bd67-74765895bd49",
-	"303e5e28-8f7c-4e5e-9b6e-681a35ec368d",
+	VALUES ("def7d556-37de-4404-aad4-a22e37db232a",
+	"a60c367f-919e-4039-8698-72cd47095426",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("a81fa94f-eac7-4b24-bd67-74765895bd49",
-	'Real',
+INSERT INTO SPR_RO
+	VALUES ("def7d556-37de-4404-aad4-a22e37db232a",
+	'Set_Integer',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("303e5e28-8f7c-4e5e-9b6e-681a35ec368d",
+	VALUES ("a60c367f-919e-4039-8698-72cd47095426",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Real',
+	'Set_Integer',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
-	VALUES ("05b14e2e-fd6e-45fe-9eb5-e3c13ac0b87a",
-	"e8f7d6b2-aa9e-42ad-9203-827ba0a0612d",
+	VALUES ("365cf629-a7da-4ece-9d92-f9e5c5ae495e",
+	"17d06a30-fdcb-4f02-a28e-46415e68b258",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("05b14e2e-fd6e-45fe-9eb5-e3c13ac0b87a",
-	'Unique_Id',
+INSERT INTO SPR_RO
+	VALUES ("365cf629-a7da-4ece-9d92-f9e5c5ae495e",
+	'Set_Real',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("e8f7d6b2-aa9e-42ad-9203-827ba0a0612d",
+	VALUES ("17d06a30-fdcb-4f02-a28e-46415e68b258",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Unique_Id',
+	'Set_Real',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
-	VALUES ("3803c472-ddf4-42bc-93f9-7dd261c72e9d",
-	"34ab2627-f0c6-4d45-91d8-260a8331ef72",
+	VALUES ("14182b8a-ec4c-4854-af95-12475c36d6fc",
+	"54390774-10b8-4336-9d73-81e4f6bd55c6",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RS
-	VALUES ("3803c472-ddf4-42bc-93f9-7dd261c72e9d",
-	'String',
+INSERT INTO SPR_RO
+	VALUES ("14182b8a-ec4c-4854-af95-12475c36d6fc",
+	'Set_Unique_Id',
 	'',
 	'',
-	1,
+	3,
 	0);
 INSERT INTO C_EP_PROXY
-	VALUES ("34ab2627-f0c6-4d45-91d8-260a8331ef72",
+	VALUES ("54390774-10b8-4336-9d73-81e4f6bd55c6",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'String',
+	'Set_Unique_Id',
+	'',
+	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("5aa3b154-a950-4e9c-b461-795fc9d831fd",
+	"ac9f31f6-0ccc-44e0-8206-9c862b1d6eaf",
+	"5d86e2f3-6251-4a73-8224-b875dd53f848");
+INSERT INTO SPR_RO
+	VALUES ("5aa3b154-a950-4e9c-b461-795fc9d831fd",
+	'Set_String',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("ac9f31f6-0ccc-44e0-8206-9c862b1d6eaf",
+	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
+	-1,
+	'Set_String',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO C_I_PROXY
