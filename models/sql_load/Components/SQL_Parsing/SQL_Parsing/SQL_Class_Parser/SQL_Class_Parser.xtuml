@@ -76,6 +76,133 @@ INSERT INTO O_ATTR
 	"ba5eda7a-def5-0000-0000-000000000006",
 	'',
 	'');
+INSERT INTO O_REF
+	VALUES ("132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"c434f450-00c6-4ded-bd46-6ffc1098f36d",
+	0,
+	"76fe7ad2-ee99-4d6e-986a-e36eb723b875",
+	"a3b361cc-aadf-4cc7-b74e-935a9ccc8adf",
+	"93bedd1e-9e27-4629-8b6d-88929a192fe4",
+	"91f980b3-db58-4599-a022-e3b1b6015a52",
+	"9ac54199-a93c-4468-8927-0f078f78f620",
+	"633cd341-5107-4df7-b77f-ec616eebd620",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'SQL_Class',
+	'name',
+	'R9911.''is currently creating''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"a3b361cc-aadf-4cc7-b74e-935a9ccc8adf",
+	"93bedd1e-9e27-4629-8b6d-88929a192fe4",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("76fe7ad2-ee99-4d6e-986a-e36eb723b875",
+	"c434f450-00c6-4ded-bd46-6ffc1098f36d",
+	0,
+	"a3b361cc-aadf-4cc7-b74e-935a9ccc8adf",
+	"91f980b3-db58-4599-a022-e3b1b6015a52",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_REF
+	VALUES ("132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	0,
+	"a625599e-23dd-4c31-9c5b-c57743009c32",
+	"f34879b5-e210-442b-921d-beef926273ac",
+	"3ea70b2b-fcd4-494f-89ea-645b45c1e026",
+	"73ab0c4b-ceb8-4e32-963c-de8b30dbc4f2",
+	"9ac54199-a93c-4468-8927-0f078f78f620",
+	"9c5e23c8-6eac-401c-950a-db1c2e791079",
+	"633cd341-5107-4df7-b77f-ec616eebd620",
+	0,
+	'',
+	'SQL_Attribute',
+	'class_name',
+	'R9912.''is currently creating''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"f34879b5-e210-442b-921d-beef926273ac",
+	"3ea70b2b-fcd4-494f-89ea-645b45c1e026",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("a625599e-23dd-4c31-9c5b-c57743009c32",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	0,
+	"f34879b5-e210-442b-921d-beef926273ac",
+	"73ab0c4b-ceb8-4e32-963c-de8b30dbc4f2",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("9ac54199-a93c-4468-8927-0f078f78f620",
+	"132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"76fe7ad2-ee99-4d6e-986a-e36eb723b875",
+	"c434f450-00c6-4ded-bd46-6ffc1098f36d",
+	1,
+	'name');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("76fe7ad2-ee99-4d6e-986a-e36eb723b875",
+	"c434f450-00c6-4ded-bd46-6ffc1098f36d",
+	'../../SQL_Metamodel/SQL_Class/SQL_Class.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("9ac54199-a93c-4468-8927-0f078f78f620",
+	"132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"ee23b22b-02d1-448c-a07d-c7419dad4d62",
+	'class_name',
+	'
+
+',
+	'class_',
+	'name',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	0,
+	"40405cb4-1808-4f37-b6fe-081f606ddc40",
+	"f34879b5-e210-442b-921d-beef926273ac",
+	"3ea70b2b-fcd4-494f-89ea-645b45c1e026",
+	"73ab0c4b-ceb8-4e32-963c-de8b30dbc4f2",
+	"a4c82c06-bb02-4933-9e0d-60a8bc713477",
+	"a9eaecdf-4fec-485e-999d-ad32f67d0ba4",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'SQL_Attribute',
+	'name',
+	'R9912.''is currently creating''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("40405cb4-1808-4f37-b6fe-081f606ddc40",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	0,
+	"f34879b5-e210-442b-921d-beef926273ac",
+	"73ab0c4b-ceb8-4e32-963c-de8b30dbc4f2",
+	'../SQL_Parsing.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("a4c82c06-bb02-4933-9e0d-60a8bc713477",
+	"132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"40405cb4-1808-4f37-b6fe-081f606ddc40",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	1,
+	'name');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("40405cb4-1808-4f37-b6fe-081f606ddc40",
+	"01cb4ed3-795c-4051-8d34-4b351f54ef61",
+	'../../SQL_Metamodel/SQL_Attribute/SQL_Attribute.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("a4c82c06-bb02-4933-9e0d-60a8bc713477",
+	"132ee3d1-f640-4f8d-956e-37b8e1f89929",
+	"9ac54199-a93c-4468-8927-0f078f78f620",
+	'attribute_name',
+	'',
+	'attribute_',
+	'name',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"132ee3d1-f640-4f8d-956e-37b8e1f89929");
