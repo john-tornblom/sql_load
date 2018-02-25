@@ -291,6 +291,7 @@ INSERT INTO S_SYNC
 for each sql_instance in sql_instances
 	create object instance xtuml_instance of xtUML_Instance;
 	xtuml_instance.xtuml_id = Instance_Stream::New(key_letter: sql_instance.class_name);
+	relate xtuml_instance to sql_instance across R301;
 end for;
 
 select many sql_integers from instances of SQL_Integer;
@@ -352,12 +353,42 @@ for each sql_association in sql_associations
 	select many sql_from_instances related by sql_from_link->SQL_Link[R8]->SQL_Class[R11]->SQL_Instance[R3];
 	select many sql_to_instances related by sql_to_link->SQL_Link[R8]->SQL_Class[R11]->SQL_Instance[R3];
 	
+	select any first_from_attr_link related by sql_from_link->SQL_Link[R8]->SQL_Attribute_Link[R7];
+	select any first_to_attr_link related by sql_to_link->SQL_Link[R8]->SQL_Attribute_Link[R7];
+
 	for each sql_from_instance in sql_from_instances
 		for each sql_to_instance in sql_to_instances
+
+		equals = true;
+		from_attr_link = first_from_attr_link;
+		to_attr_link = first_to_attr_link;
+		
+		while not empty from_attr_link and not empty to_attr_link and equals
+			select any from_value related by from_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
+						where (selected.instance_id == sql_from_instance.id);
+					
+			select any to_value related by to_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
+						where (selected.instance_id == sql_to_instance.id);
+						
+			equals = equals and ::Compare_Values(lhs: from_value.id, rhs: to_value.id);
+			select one from_attr_link related by from_attr_link->SQL_Attribute_Link[R13.''precedes''];
+			select one to_attr_link related by to_attr_link->SQL_Attribute_Link[R13.''precedes''];
+		end while;
+		
+		if not equals
+			continue;
+		end if;
+		select one xtuml_from_instance related by sql_from_instance->xtUML_Instance[R301];
+		select one xtuml_to_instance related by sql_to_instance->xtUML_Instance[R301];
+		Instance_Stream::Connect(from_id: xtuml_from_instance.xtuml_id,
+								 from_key_letter: sql_from_instance.class_name,
+								 to_id: xtuml_to_instance.xtuml_id,
+								 to_key_letter: sql_to_instance.class_name,
+								 rel_id: sql_association.rel_id, 
+								 phrase: sql_to_link.phrase);
 		end for;
 	end for;
 end for;
-
 ',
 	"ba5eda7a-def5-0000-0000-000000000000",
 	1,
@@ -370,54 +401,62 @@ INSERT INTO PE_PE
 	"00000000-0000-0000-0000-000000000000",
 	1);
 INSERT INTO S_SYNC
-	VALUES ("d4ecd38a-e616-4187-a22b-176409fddf38",
+	VALUES ("79ff1802-9537-43c9-9975-6409635f52c4",
 	"00000000-0000-0000-0000-000000000000",
-	'check',
+	'Compare_Values',
 	'',
-	'//TODO
-return false;',
+	'select any lhs from instances of SQL_Value where (selected.id == param.lhs);
+select one lhs_integer related by lhs->SQL_Integer[R12];
+select one lhs_real related by lhs->SQL_Real[R12];
+select one lhs_unique_id related by lhs->SQL_Unique_Id[R12];
+select one lhs_string related by lhs->SQL_String[R12];
+
+select any rhs from instances of SQL_Value where (selected.id == param.rhs);
+select one rhs_integer related by rhs->SQL_Integer[R12];
+select one rhs_real related by rhs->SQL_Real[R12];
+select one rhs_unique_id related by rhs->SQL_Unique_Id[R12];
+select one rhs_string related by rhs->SQL_String[R12];
+
+if not_empty lhs_integer and not_empty rhs_integer
+	return lhs_integer.value == rhs_integer.value;
+
+elif not_empty lhs_real and not_empty rhs_real
+	return lhs_real.value == rhs_real.value;
+	
+elif not_empty lhs_unique_id and not_empty rhs_unique_id
+	return lhs_unique_id.value == rhs_unique_id.value;
+	
+elif not_empty lhs_string and not_empty rhs_string
+	return lhs_string.value == rhs_string.value;
+	
+else
+	return empty lhs and empty rhs;
+end if;
+',
 	"ba5eda7a-def5-0000-0000-000000000001",
 	1,
 	'',
 	0);
 INSERT INTO S_SPARM
-	VALUES ("8b5de7bf-5eb4-43cd-9885-4e7ce7706d3e",
-	"d4ecd38a-e616-4187-a22b-176409fddf38",
-	'from_id',
+	VALUES ("e9633631-459a-42c5-bcad-08b06e5049a3",
+	"79ff1802-9537-43c9-9975-6409635f52c4",
+	'lhs',
 	"ba5eda7a-def5-0000-0000-000000000005",
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000",
 	'');
 INSERT INTO S_SPARM
-	VALUES ("3019032c-11b4-4746-ac5c-ebd688b7e5f6",
-	"d4ecd38a-e616-4187-a22b-176409fddf38",
-	'to_id',
+	VALUES ("1020feb9-0613-4080-94fd-95a60c93a695",
+	"79ff1802-9537-43c9-9975-6409635f52c4",
+	'rhs',
 	"ba5eda7a-def5-0000-0000-000000000005",
 	0,
 	'',
-	"8b5de7bf-5eb4-43cd-9885-4e7ce7706d3e",
-	'');
-INSERT INTO S_SPARM
-	VALUES ("e31fc80a-08ad-432f-92cb-f99b113d10fc",
-	"d4ecd38a-e616-4187-a22b-176409fddf38",
-	'rel_id',
-	"ba5eda7a-def5-0000-0000-000000000004",
-	0,
-	'',
-	"3019032c-11b4-4746-ac5c-ebd688b7e5f6",
-	'');
-INSERT INTO S_SPARM
-	VALUES ("e5ddbb9a-1327-48ba-8b0b-4d0886a41d9a",
-	"d4ecd38a-e616-4187-a22b-176409fddf38",
-	'phrase',
-	"ba5eda7a-def5-0000-0000-000000000004",
-	0,
-	'',
-	"e31fc80a-08ad-432f-92cb-f99b113d10fc",
+	"e9633631-459a-42c5-bcad-08b06e5049a3",
 	'');
 INSERT INTO PE_PE
-	VALUES ("d4ecd38a-e616-4187-a22b-176409fddf38",
+	VALUES ("79ff1802-9537-43c9-9975-6409635f52c4",
 	1,
 	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
 	"00000000-0000-0000-0000-000000000000",
