@@ -264,6 +264,33 @@ INSERT INTO O_ATTR
 	"ba5eda7a-def5-0000-0000-000000000007",
 	'',
 	'');
+INSERT INTO O_DBATTR
+	VALUES ("d2fcf15b-440b-4fad-856f-a057a88f6f51",
+	"f4fa9358-bcfc-4c3a-9ff3-542692cbedab",
+	'select one from_sql_class related by self->SQL_From_Link[R9]->SQL_Link[R8]->SQL_Class[R11];
+select one to_sql_class related by self->SQL_To_Link[R10]->SQL_Link[R8]->SQL_Class[R11];
+if not_empty from_sql_class and not_empty to_sql_class
+	self.is_reflexive = (from_sql_class == to_sql_class);
+else
+	self.is_reflexive = false;
+end if;',
+	1,
+	0);
+INSERT INTO O_BATTR
+	VALUES ("d2fcf15b-440b-4fad-856f-a057a88f6f51",
+	"f4fa9358-bcfc-4c3a-9ff3-542692cbedab");
+INSERT INTO O_ATTR
+	VALUES ("d2fcf15b-440b-4fad-856f-a057a88f6f51",
+	"f4fa9358-bcfc-4c3a-9ff3-542692cbedab",
+	"9a25dbad-48fa-42cc-ade2-3d75df63f5d1",
+	'is_reflexive',
+	'',
+	'',
+	'is_reflexive',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000001",
+	'',
+	'');
 INSERT INTO O_ID
 	VALUES (0,
 	"f4fa9358-bcfc-4c3a-9ff3-542692cbedab");
