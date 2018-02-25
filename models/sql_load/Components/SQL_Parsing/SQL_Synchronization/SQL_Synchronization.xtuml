@@ -285,7 +285,7 @@ INSERT INTO PE_PE
 INSERT INTO S_SYNC
 	VALUES ("01280d73-a349-4da3-8aee-d6d9580a178a",
 	"00000000-0000-0000-0000-000000000000",
-	'play',
+	'Synchronize',
 	'',
 	'select many sql_instances from instances of SQL_Instance;
 for each sql_instance in sql_instances

@@ -589,7 +589,7 @@ INSERT INTO SPR_RO
 	'End_Of_Stream',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("7725afda-5143-482e-afb1-12ca3f8a605c",
@@ -607,7 +607,7 @@ INSERT INTO SPR_RO
 	'New',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("f3fdb84b-9a2d-458f-b0c2-3084e28fb912",
@@ -622,16 +622,16 @@ INSERT INTO SPR_REP
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
 INSERT INTO SPR_RO
 	VALUES ("366a9cf1-9cc6-47b9-ac6b-264e41247684",
-	'Relate',
+	'Connect',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("b4ae3ff9-ce35-40c5-a48f-ec54e1b3637a",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
-	'Relate',
+	'Connect',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO SPR_REP
@@ -643,7 +643,7 @@ INSERT INTO SPR_RO
 	'Set_Integer',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("a60c367f-919e-4039-8698-72cd47095426",
@@ -661,7 +661,7 @@ INSERT INTO SPR_RO
 	'Set_Real',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("17d06a30-fdcb-4f02-a28e-46415e68b258",
@@ -679,7 +679,7 @@ INSERT INTO SPR_RO
 	'Set_Unique_Id',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("54390774-10b8-4336-9d73-81e4f6bd55c6",
@@ -697,13 +697,31 @@ INSERT INTO SPR_RO
 	'Set_String',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("ac9f31f6-0ccc-44e0-8206-9c862b1d6eaf",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
 	'Set_String',
+	'',
+	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("108f18fa-0f08-451c-afb2-d078794c64f7",
+	"b6aa1852-0da4-4e9a-96de-40a375cb59e6",
+	"5d86e2f3-6251-4a73-8224-b875dd53f848");
+INSERT INTO SPR_RO
+	VALUES ("108f18fa-0f08-451c-afb2-d078794c64f7",
+	'Synchronize',
+	'',
+	'::Synchronize();',
+	1,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("b6aa1852-0da4-4e9a-96de-40a375cb59e6",
+	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
+	-1,
+	'Synchronize',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO C_I_PROXY

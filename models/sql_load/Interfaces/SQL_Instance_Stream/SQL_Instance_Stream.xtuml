@@ -310,6 +310,20 @@ INSERT INTO C_PP
 	0,
 	'',
 	"00000000-0000-0000-0000-000000000000");
+INSERT INTO C_EP
+	VALUES ("b6aa1852-0da4-4e9a-96de-40a375cb59e6",
+	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
+	-1,
+	'Synchronize',
+	'');
+INSERT INTO C_IO
+	VALUES ("b6aa1852-0da4-4e9a-96de-40a375cb59e6",
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'Synchronize',
+	'',
+	1,
+	'',
+	"ac9f31f6-0ccc-44e0-8206-9c862b1d6eaf");
 INSERT INTO PE_PE
 	VALUES ("cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	1,
