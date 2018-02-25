@@ -73,7 +73,25 @@ INSERT INTO O_ATTR
 	'sql_',
 	'id',
 	1,
-	"ba5eda7a-def5-0000-0000-000000000002",
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("b015af7e-ccc2-414b-9636-135311e3db67",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1");
+INSERT INTO O_BATTR
+	VALUES ("b015af7e-ccc2-414b-9636-135311e3db67",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1");
+INSERT INTO O_ATTR
+	VALUES ("b015af7e-ccc2-414b-9636-135311e3db67",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"18377dc5-6cd0-4e54-8ee6-d30f021537f7",
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000006",
 	'',
 	'');
 INSERT INTO O_ID

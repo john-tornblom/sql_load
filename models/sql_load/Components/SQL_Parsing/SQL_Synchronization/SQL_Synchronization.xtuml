@@ -39,7 +39,7 @@ INSERT INTO GD_NCS
 	VALUES ("72138de0-7221-4e7b-b36b-bdec83c7b54a");
 INSERT INTO DIM_ND
 	VALUES (204.000000,
-	97.000000,
+	133.000000,
 	"72138de0-7221-4e7b-b36b-bdec83c7b54a");
 INSERT INTO DIM_GE
 	VALUES (4152.000000,
@@ -52,8 +52,18 @@ INSERT INTO DIM_ELE
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
 	VALUES ("2f6934d6-b276-470a-b965-03cf916b9b38",
+	4272.000000,
+	3313.000000,
+	"72138de0-7221-4e7b-b36b-bdec83c7b54a");
+INSERT INTO DIM_CON
+	VALUES ("befd70f7-e27b-4221-9426-8b06690c28c7",
 	4356.000000,
 	3228.000000,
+	"72138de0-7221-4e7b-b36b-bdec83c7b54a");
+INSERT INTO DIM_CON
+	VALUES ("887a71a6-55ca-437b-8faa-6ebd13b04bff",
+	4205.000000,
+	3180.000000,
 	"72138de0-7221-4e7b-b36b-bdec83c7b54a");
 INSERT INTO GD_GE
 	VALUES ("a3f86dab-47d6-4d45-bba7-1b93297c5952",
@@ -68,11 +78,11 @@ INSERT INTO GD_NCS
 	VALUES ("a3f86dab-47d6-4d45-bba7-1b93297c5952");
 INSERT INTO DIM_ND
 	VALUES (204.000000,
-	97.000000,
+	121.000000,
 	"a3f86dab-47d6-4d45-bba7-1b93297c5952");
 INSERT INTO DIM_GE
-	VALUES (4704.000000,
-	3180.000000,
+	VALUES (4512.000000,
+	3360.000000,
 	"a3f86dab-47d6-4d45-bba7-1b93297c5952",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -81,8 +91,8 @@ INSERT INTO DIM_ELE
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_CON
 	VALUES ("40199ab0-04d5-4336-8462-e42d6bac4dd7",
-	4704.000000,
-	3228.000000,
+	4512.000000,
+	3420.000000,
 	"a3f86dab-47d6-4d45-bba7-1b93297c5952");
 INSERT INTO GD_GE
 	VALUES ("6d243222-44e9-4d3a-ac97-69f2c9927b11",
@@ -105,8 +115,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"b69db8e2-a701-47da-a023-f4ba33727041");
 INSERT INTO DIM_GE
-	VALUES (4570.000000,
-	3230.000000,
+	VALUES (4348.000000,
+	3433.000000,
 	"b69db8e2-a701-47da-a023-f4ba33727041",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -124,8 +134,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"e624a68d-cf7d-4ec6-9f82-027d5030e885");
 INSERT INTO DIM_GE
-	VALUES (4515.000000,
-	3180.000000,
+	VALUES (4278.000000,
+	3381.000000,
 	"e624a68d-cf7d-4ec6-9f82-027d5030e885",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -143,8 +153,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"fc312667-b969-46e0-96e3-b52b352bff38");
 INSERT INTO DIM_GE
-	VALUES (4360.000000,
-	3231.000000,
+	VALUES (4276.000000,
+	3316.000000,
 	"fc312667-b969-46e0-96e3-b52b352bff38",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -156,21 +166,34 @@ INSERT INTO GD_LS
 	"6d243222-44e9-4d3a-ac97-69f2c9927b11",
 	"00000000-0000-0000-0000-000000000000",
 	"b7c190f1-015a-4367-8e0a-38ce34ff6085",
+	"bb7569a6-2451-4344-b974-70310c864663");
+INSERT INTO GD_LS
+	VALUES ("494c30b5-53f2-428c-8ad2-915e442ce2bf",
+	"6d243222-44e9-4d3a-ac97-69f2c9927b11",
+	"bc4c1a05-1cc0-4e26-af13-298ea6da5eff",
+	"bb7569a6-2451-4344-b974-70310c864663",
 	"8c69a5d6-69e7-4d49-a6d9-0721a6852257");
 INSERT INTO DIM_WAY
 	VALUES ("b7c190f1-015a-4367-8e0a-38ce34ff6085",
-	4704.000000,
-	3228.000000,
+	4512.000000,
+	3420.000000,
 	"6d243222-44e9-4d3a-ac97-69f2c9927b11",
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_WAY
 	VALUES ("8c69a5d6-69e7-4d49-a6d9-0721a6852257",
-	4356.000000,
-	3228.000000,
+	4272.000000,
+	3313.000000,
 	"6d243222-44e9-4d3a-ac97-69f2c9927b11",
 	"00000000-0000-0000-0000-000000000000",
 	"b7c190f1-015a-4367-8e0a-38ce34ff6085");
+INSERT INTO DIM_WAY
+	VALUES ("bb7569a6-2451-4344-b974-70310c864663",
+	4270.000000,
+	3420.000000,
+	"6d243222-44e9-4d3a-ac97-69f2c9927b11",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_GE
 	VALUES (0.000000,
 	0.000000,
@@ -184,6 +207,282 @@ INSERT INTO DIM_ED
 	VALUES ("40199ab0-04d5-4336-8462-e42d6bac4dd7",
 	"2f6934d6-b276-470a-b965-03cf916b9b38",
 	"6d243222-44e9-4d3a-ac97-69f2c9927b11");
+INSERT INTO GD_GE
+	VALUES ("9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	24,
+	0,
+	'sql_load::Components::SQL_Parsing::SQL_Synchronization::R302');
+INSERT INTO GD_CON
+	VALUES ("9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("158f3a85-db1b-40db-a9c3-4bea1ebdc83b",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"158f3a85-db1b-40db-a9c3-4bea1ebdc83b");
+INSERT INTO DIM_GE
+	VALUES (4364.000000,
+	3232.000000,
+	"158f3a85-db1b-40db-a9c3-4bea1ebdc83b",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("158f3a85-db1b-40db-a9c3-4bea1ebdc83b",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("9deb5179-f3dc-4c70-9124-32b2ebc7fa61",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"9deb5179-f3dc-4c70-9124-32b2ebc7fa61");
+INSERT INTO DIM_GE
+	VALUES (4376.000000,
+	3125.000000,
+	"9deb5179-f3dc-4c70-9124-32b2ebc7fa61",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("9deb5179-f3dc-4c70-9124-32b2ebc7fa61",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("f7439dce-7e18-472a-9662-11f285c14d76",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"f7439dce-7e18-472a-9662-11f285c14d76");
+INSERT INTO DIM_GE
+	VALUES (4212.000000,
+	3148.000000,
+	"f7439dce-7e18-472a-9662-11f285c14d76",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("f7439dce-7e18-472a-9662-11f285c14d76",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("a72a3de9-0717-446a-a34f-651538712940",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"0ccc562f-cc32-4279-a0b5-927a50148928",
+	"95dbcad7-b4ce-4b6f-9bb8-2284f0f5be5e");
+INSERT INTO GD_LS
+	VALUES ("373dbb11-038f-4d10-9146-041bdc71b0af",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"a72a3de9-0717-446a-a34f-651538712940",
+	"95dbcad7-b4ce-4b6f-9bb8-2284f0f5be5e",
+	"4f98c0a7-2058-4ad3-b44d-14fc520f1320");
+INSERT INTO GD_LS
+	VALUES ("2bcc3803-cd1f-401b-941e-0795fdfd4ced",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"373dbb11-038f-4d10-9146-041bdc71b0af",
+	"4f98c0a7-2058-4ad3-b44d-14fc520f1320",
+	"0674446b-a526-41e9-9d58-08ab34cc5916");
+INSERT INTO GD_AOS
+	VALUES ("d02cb71b-45f4-46b0-a697-b98910e2b5eb",
+	"2bcc3803-cd1f-401b-941e-0795fdfd4ced");
+INSERT INTO GD_LS
+	VALUES ("c00b5f43-0364-4a50-b461-083e5d41e08b",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"2bcc3803-cd1f-401b-941e-0795fdfd4ced",
+	"0674446b-a526-41e9-9d58-08ab34cc5916",
+	"3fc9b33f-8987-4e64-a62e-2847b902c1db");
+INSERT INTO DIM_WAY
+	VALUES ("0ccc562f-cc32-4279-a0b5-927a50148928",
+	4356.000000,
+	3228.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("3fc9b33f-8987-4e64-a62e-2847b902c1db",
+	4205.000000,
+	3180.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"0ccc562f-cc32-4279-a0b5-927a50148928");
+INSERT INTO DIM_WAY
+	VALUES ("95dbcad7-b4ce-4b6f-9bb8-2284f0f5be5e",
+	4422.000000,
+	3228.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("4f98c0a7-2058-4ad3-b44d-14fc520f1320",
+	4422.000000,
+	3120.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("0674446b-a526-41e9-9d58-08ab34cc5916",
+	4205.000000,
+	3120.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("9b52ee6b-7c14-42ba-bc88-1327cb4f9643",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_CON
+	VALUES ("d02cb71b-45f4-46b0-a697-b98910e2b5eb",
+	4422.000000,
+	3121.000000,
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643");
+INSERT INTO DIM_ED
+	VALUES ("befd70f7-e27b-4221-9426-8b06690c28c7",
+	"887a71a6-55ca-437b-8faa-6ebd13b04bff",
+	"9b52ee6b-7c14-42ba-bc88-1327cb4f9643");
+INSERT INTO GD_GE
+	VALUES ("ea409824-ee34-4f97-b972-75f852a3c45a",
+	"221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	21,
+	0,
+	'sql_load::Components::SQL_Parsing::SQL_Synchronization::xtUML_Connection');
+INSERT INTO GD_SHP
+	VALUES ("ea409824-ee34-4f97-b972-75f852a3c45a");
+INSERT INTO GD_NCS
+	VALUES ("ea409824-ee34-4f97-b972-75f852a3c45a");
+INSERT INTO DIM_ND
+	VALUES (169.000000,
+	121.000000,
+	"ea409824-ee34-4f97-b972-75f852a3c45a");
+INSERT INTO DIM_GE
+	VALUES (4524.000000,
+	3072.000000,
+	"ea409824-ee34-4f97-b972-75f852a3c45a",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("ea409824-ee34-4f97-b972-75f852a3c45a",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_CON
+	VALUES ("f86b564d-7606-413f-9264-dd6f40649c70",
+	4524.000000,
+	3120.000000,
+	"ea409824-ee34-4f97-b972-75f852a3c45a");
+INSERT INTO GD_GE
+	VALUES ("10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	34,
+	0,
+	'sql_load::Components::SQL_Parsing::SQL_Synchronization::R302::xtUML_Connection');
+INSERT INTO GD_CON
+	VALUES ("10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("92a45bca-6db0-4a59-9f09-add5a930ab0f",
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	1,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"92a45bca-6db0-4a59-9f09-add5a930ab0f");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"92a45bca-6db0-4a59-9f09-add5a930ab0f",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("92a45bca-6db0-4a59-9f09-add5a930ab0f",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("6d90b064-01b5-4939-9018-cb58a18799fa",
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	3,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"6d90b064-01b5-4939-9018-cb58a18799fa");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"6d90b064-01b5-4939-9018-cb58a18799fa",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("6d90b064-01b5-4939-9018-cb58a18799fa",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_CTXT
+	VALUES ("63639134-9613-4fcd-9365-85938edd9bee",
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	2,
+	0.000000,
+	0.000000);
+INSERT INTO DIM_ND
+	VALUES (0.000000,
+	0.000000,
+	"63639134-9613-4fcd-9365-85938edd9bee");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"63639134-9613-4fcd-9365-85938edd9bee",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("63639134-9613-4fcd-9365-85938edd9bee",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_LS
+	VALUES ("9e6168e1-ed70-4330-a983-9597e39378cd",
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"00000000-0000-0000-0000-000000000000",
+	"7c90c047-b1cc-4690-99be-daa46a586456",
+	"901144f6-2e3f-464c-8500-1ee46237ba6b");
+INSERT INTO DIM_WAY
+	VALUES ("7c90c047-b1cc-4690-99be-daa46a586456",
+	4524.000000,
+	3120.000000,
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_WAY
+	VALUES ("901144f6-2e3f-464c-8500-1ee46237ba6b",
+	4422.000000,
+	3121.000000,
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"10835cfa-7711-4ec0-b247-7d07e6d577da",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("10835cfa-7711-4ec0-b247-7d07e6d577da",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ED
+	VALUES ("f86b564d-7606-413f-9264-dd6f40649c70",
+	"d02cb71b-45f4-46b0-a697-b98910e2b5eb",
+	"10835cfa-7711-4ec0-b247-7d07e6d577da");
 INSERT INTO DIM_DIA
 	VALUES ("221f5940-34bc-4228-9c95-f3a4bbe2e9c9",
 	'',
@@ -269,6 +568,97 @@ INSERT INTO PE_PE
 	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
 	"00000000-0000-0000-0000-000000000000",
 	9);
+INSERT INTO R_ASSOC
+	VALUES ("5f6f6cb0-0dba-461d-a295-a6f2b798bd80");
+INSERT INTO R_REL
+	VALUES ("5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	302,
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO R_AONE
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da",
+	1,
+	1,
+	'is connected to');
+INSERT INTO O_RTIDA
+	VALUES ("9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da");
+INSERT INTO O_OIDA_PROXY
+	VALUES ("9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	'sql_id',
+	'./xtUML_Instance/xtUML_Instance.xtuml');
+INSERT INTO R_RTO
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da",
+	0);
+INSERT INTO O_ID_PROXY
+	VALUES (0,
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	'./xtUML_Instance/xtUML_Instance.xtuml');
+INSERT INTO R_OIR
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO R_AOTH
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1",
+	1,
+	1,
+	'is connected from');
+INSERT INTO O_RTIDA
+	VALUES ("9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1");
+INSERT INTO R_RTO
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1",
+	0);
+INSERT INTO R_OIR
+	VALUES ("63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO R_ASSR
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401",
+	0);
+INSERT INTO R_RGO
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401");
+INSERT INTO R_OIR
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_OBJ_PROXY
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	'xtUML_Connection',
+	2,
+	'xtUML_Connection',
+	'',
+	"00000000-0000-0000-0000-000000000000",
+	'./xtUML_Connection/xtUML_Connection.xtuml');
+INSERT INTO PE_PE
+	VALUES ("5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	1,
+	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	9);
 INSERT INTO O_IOBJ
 	VALUES ("e7f9a72d-fdc1-4862-b3e7-597f58bf22c6",
 	"25577916-2c3c-4f4d-b92c-82df9c317e86",
@@ -289,62 +679,64 @@ INSERT INTO S_SYNC
 	'',
 	'select many sql_instances from instances of SQL_Instance;
 for each sql_instance in sql_instances
+	select one xtuml_instance related by sql_instance->xtUML_Instance[R301];
+	if not_empty xtuml_instance
+		continue;
+	end if;
+	
 	create object instance xtuml_instance of xtUML_Instance;
 	xtuml_instance.xtuml_id = Instance_Stream::New(key_letter: sql_instance.class_name);
 	relate xtuml_instance to sql_instance across R301;
+	
+	select many sql_integers related by sql_instance->SQL_Value[R5]->SQL_Integer[R12];
+	for each sql_integer in sql_integers
+		select one sql_attribute related by sql_integer->SQL_Value[R12]->SQL_Attribute[R4];
+		if sql_attribute.is_referential
+			continue;
+		end if;
+		Instance_Stream::Set_Integer(key_letter: sql_attribute.class_name, 
+									 instance_id: xtuml_instance.xtuml_id, 
+									 name: sql_integer.attribute_name, 
+									 value: sql_integer.value);
+	end for;
+
+	select many sql_reals related by sql_instance->SQL_Value[R5]->SQL_Real[R12];
+	for each sql_real in sql_reals
+		select one sql_attribute related by sql_real->SQL_Value[R12]->SQL_Attribute[R4];
+		if sql_attribute.is_referential
+			continue;
+		end if;
+		Instance_Stream::Set_Real(key_letter: sql_attribute.class_name, 
+								  instance_id: xtuml_instance.xtuml_id, 
+								  name: sql_real.attribute_name, 
+								  value: sql_real.value);
+	end for;
+	
+	select many sql_strings related by sql_instance->SQL_Value[R5]->SQL_String[R12];
+	for each sql_string in sql_strings
+		select one sql_attribute related by sql_string->SQL_Value[R12]->SQL_Attribute[R4];
+		if sql_attribute.is_referential
+			continue;
+		end if;
+		Instance_Stream::Set_String(key_letter: sql_attribute.class_name, 
+									instance_id: xtuml_instance.xtuml_id, 
+									name: sql_string.attribute_name, 
+									value: sql_string.value);
+	end for;
+
+	select many sql_unique_ids related by sql_instance->SQL_Value[R5]->SQL_Unique_Id[R12];
+	for each sql_unique_id in sql_unique_ids
+		select one sql_attribute related by sql_unique_id->SQL_Value[R12]->SQL_Attribute[R4];
+		if sql_attribute.is_referential
+			continue;
+		end if;
+		Instance_Stream::Set_Unique_Id(key_letter: sql_attribute.class_name, 
+									   instance_id: xtuml_instance.xtuml_id, 
+									   name: sql_unique_id.attribute_name, 
+									   value: sql_unique_id.value);
+	end for;
 end for;
 
-select many sql_integers from instances of SQL_Integer;
-for each sql_integer in sql_integers
-	select one xtuml_instance related by sql_integer->SQL_Value[R12]->SQL_Instance[R5]->xtUML_Instance[R301];
-	select one sql_attribute related by sql_integer->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_Integer(key_letter: sql_attribute.class_name, 
-								 instance_id: xtuml_instance.xtuml_id, 
-								 name: sql_integer.attribute_name, 
-								 value: sql_integer.value);
-end for;
-
-select many sql_reals from instances of SQL_Real;
-for each sql_real in sql_reals
-	select one xtuml_instance related by sql_real->SQL_Value[R12]->SQL_Instance[R5]->xtUML_Instance[R301];
-	select one sql_attribute related by sql_real->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_Real(key_letter: sql_attribute.class_name, 
-							  instance_id: xtuml_instance.xtuml_id, 
-							  name: sql_real.attribute_name, 
-							  value: sql_real.value);
-end for;
-
-select many sql_strings from instances of SQL_String;
-for each sql_string in sql_strings
-	select one xtuml_instance related by sql_string->SQL_Value[R12]->SQL_Instance[R5]->xtUML_Instance[R301];
-	select one sql_attribute related by sql_string->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_String(key_letter: sql_attribute.class_name, 
-								instance_id: xtuml_instance.xtuml_id, 
-								name: sql_string.attribute_name, 
-								value: sql_string.value);
-end for;
-
-select many sql_unique_ids from instances of SQL_Unique_Id;
-for each sql_unique_id in sql_unique_ids
-	select one xtuml_instance related by sql_unique_id->SQL_Value[R12]->SQL_Instance[R5]->xtUML_Instance[R301];
-	select one sql_attribute related by sql_unique_id->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_Unique_Id(key_letter: sql_attribute.class_name, 
-								   instance_id: xtuml_instance.xtuml_id, 
-								   name: sql_unique_id.attribute_name, 
-								   value: sql_unique_id.value);
-end for;
 
 select many sql_associations from instances of SQL_Association;
 for each sql_association in sql_associations
@@ -358,34 +750,43 @@ for each sql_association in sql_associations
 
 	for each sql_from_instance in sql_from_instances
 		for each sql_to_instance in sql_to_instances
-
-		equals = true;
-		from_attr_link = first_from_attr_link;
-		to_attr_link = first_to_attr_link;
-		
-		while not empty from_attr_link and not empty to_attr_link and equals
-			select any from_value related by from_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
-						where (selected.instance_id == sql_from_instance.id);
-					
-			select any to_value related by to_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
-						where (selected.instance_id == sql_to_instance.id);
+			select any xtuml_connection from instances of xtUML_Connection
+						where (selected.from_id == sql_from_instance.id and
+							   selected.to_id == sql_to_instance.id);
+			
+			if not_empty xtuml_connection
+				continue;
+			end if;
+			
+			equals = true;
+			from_attr_link = first_from_attr_link;
+			to_attr_link = first_to_attr_link;
+			
+			while not empty from_attr_link and not empty to_attr_link and equals
+				select any from_value related by from_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
+							where (selected.instance_id == sql_from_instance.id);
 						
-			equals = equals and ::Compare_Values(lhs: from_value.id, rhs: to_value.id);
-			select one from_attr_link related by from_attr_link->SQL_Attribute_Link[R13.''precedes''];
-			select one to_attr_link related by to_attr_link->SQL_Attribute_Link[R13.''precedes''];
-		end while;
-		
-		if not equals
-			continue;
-		end if;
-		select one xtuml_from_instance related by sql_from_instance->xtUML_Instance[R301];
-		select one xtuml_to_instance related by sql_to_instance->xtUML_Instance[R301];
-		Instance_Stream::Connect(from_id: xtuml_from_instance.xtuml_id,
-								 from_key_letter: sql_from_instance.class_name,
-								 to_id: xtuml_to_instance.xtuml_id,
-								 to_key_letter: sql_to_instance.class_name,
-								 rel_id: sql_association.rel_id, 
-								 phrase: sql_to_link.phrase);
+				select any to_value related by to_attr_link->SQL_Attribute[R7]->SQL_Value[R4]
+							where (selected.instance_id == sql_to_instance.id);
+							
+				equals = equals and ::Compare_Values(lhs: from_value.id, rhs: to_value.id);
+				select one from_attr_link related by from_attr_link->SQL_Attribute_Link[R13.''precedes''];
+				select one to_attr_link related by to_attr_link->SQL_Attribute_Link[R13.''precedes''];
+			end while;
+			
+			if not equals
+				continue;
+			end if;
+			select one xtuml_from_instance related by sql_from_instance->xtUML_Instance[R301];
+			select one xtuml_to_instance related by sql_to_instance->xtUML_Instance[R301];
+			create object instance xtuml_connection of xtUML_Connection;
+			relate xtuml_from_instance to xtuml_to_instance across R302.''is connected from'' using xtuml_connection;
+			
+			Instance_Stream::Connect(from_id: xtuml_from_instance.xtuml_id,
+									 from_key_letter: sql_from_instance.class_name,
+									 to_id: xtuml_to_instance.xtuml_id,
+									 to_key_letter: sql_to_instance.class_name,
+									 rel_id: sql_association.rel_id);
 		end for;
 	end for;
 end for;

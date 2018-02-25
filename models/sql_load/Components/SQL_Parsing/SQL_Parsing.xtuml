@@ -27,7 +27,7 @@ INSERT INTO GD_MD
 	200,
 	150,
 	0,
-	'',
+	'4.1.17',
 	'sql_load::Components::SQL_Parsing');
 INSERT INTO GD_GE
 	VALUES ("dbd7bac5-2d18-4b98-b604-d5936e7c5209",
@@ -103,8 +103,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"b745ad69-e039-4a05-b9fc-753dd776a235");
 INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
+	VALUES (4010.000000,
+	3372.000000,
 	"b745ad69-e039-4a05-b9fc-753dd776a235",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -251,8 +251,8 @@ INSERT INTO DIM_ND
 	0.000000,
 	"88db5423-bb7f-438d-9338-27f9c377789e");
 INSERT INTO DIM_GE
-	VALUES (0.000000,
-	0.000000,
+	VALUES (6140.000000,
+	3372.000000,
 	"88db5423-bb7f-438d-9338-27f9c377789e",
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO DIM_ELE
@@ -581,24 +581,6 @@ INSERT INTO C_R
 	'Unnamed Interface',
 	'SQL_Parsing::Instance_Stream::SQL_Instance_Stream');
 INSERT INTO SPR_REP
-	VALUES ("73adbff0-bd75-41e8-9ce1-412f24cf7e81",
-	"7725afda-5143-482e-afb1-12ca3f8a605c",
-	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RO
-	VALUES ("73adbff0-bd75-41e8-9ce1-412f24cf7e81",
-	'End_Of_Stream',
-	'',
-	'',
-	1,
-	0);
-INSERT INTO C_EP_PROXY
-	VALUES ("7725afda-5143-482e-afb1-12ca3f8a605c",
-	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
-	-1,
-	'End_Of_Stream',
-	'',
-	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
-INSERT INTO SPR_REP
 	VALUES ("7cc082f7-fae7-4b2f-a502-6c1fe3ec9be5",
 	"f3fdb84b-9a2d-458f-b0c2-3084e28fb912",
 	"5d86e2f3-6251-4a73-8224-b875dd53f848");
@@ -704,24 +686,6 @@ INSERT INTO C_EP_PROXY
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	-1,
 	'Set_String',
-	'',
-	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
-INSERT INTO SPR_REP
-	VALUES ("108f18fa-0f08-451c-afb2-d078794c64f7",
-	"b6aa1852-0da4-4e9a-96de-40a375cb59e6",
-	"5d86e2f3-6251-4a73-8224-b875dd53f848");
-INSERT INTO SPR_RO
-	VALUES ("108f18fa-0f08-451c-afb2-d078794c64f7",
-	'Synchronize',
-	'',
-	'::Synchronize();',
-	1,
-	0);
-INSERT INTO C_EP_PROXY
-	VALUES ("b6aa1852-0da4-4e9a-96de-40a375cb59e6",
-	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
-	-1,
-	'Synchronize',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO C_I_PROXY

@@ -1,0 +1,135 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	'xtUML_Connection',
+	2,
+	'xtUML_Connection',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_REF
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da",
+	"4695c3bc-1c58-420e-97a0-c1ad56e9cef8",
+	"e0b3d5a2-25d2-4b22-ba6e-511ee7b26070",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'xtUML_Instance',
+	'sql_id',
+	'R302.''is connected to''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401",
+	'../SQL_Synchronization.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"11e55a6c-9df3-4381-91f1-1f10b62395da",
+	'../SQL_Synchronization.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("4695c3bc-1c58-420e-97a0-c1ad56e9cef8",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	"a75e57bb-fba1-4dcd-a79e-e9209641d76d",
+	"25577916-2c3c-4f4d-b92c-82df9c317e86",
+	1,
+	'id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("a75e57bb-fba1-4dcd-a79e-e9209641d76d",
+	"25577916-2c3c-4f4d-b92c-82df9c317e86",
+	'../../SQL_Metamodel/SQL_Instance/SQL_Instance.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("4695c3bc-1c58-420e-97a0-c1ad56e9cef8",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	"00000000-0000-0000-0000-000000000000",
+	'to_id',
+	'',
+	'to_',
+	'sql_id',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"817b09cb-2c65-492e-bdea-d2a5f7c3c401",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1",
+	"8ed5d870-39da-4542-82d8-2dc90391a45a",
+	"72d5fbe4-dcee-4613-9d7d-8d41f8a2c552",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'xtUML_Instance',
+	'sql_id',
+	'R302.''is connected from''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("9039ddb5-36a5-4217-b8a6-e1d3be9b95fe",
+	"63256e56-dd13-4315-a68f-9a2ad5ef11e1",
+	0,
+	"5f6f6cb0-0dba-461d-a295-a6f2b798bd80",
+	"a0580036-b2dd-4057-94a3-db50b36eacb1",
+	'../SQL_Synchronization.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("8ed5d870-39da-4542-82d8-2dc90391a45a",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	"a75e57bb-fba1-4dcd-a79e-e9209641d76d",
+	"25577916-2c3c-4f4d-b92c-82df9c317e86",
+	1,
+	'id');
+INSERT INTO O_ATTR
+	VALUES ("8ed5d870-39da-4542-82d8-2dc90391a45a",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	"4695c3bc-1c58-420e-97a0-c1ad56e9cef8",
+	'from_id',
+	'',
+	'from_',
+	'sql_id',
+	1,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"929c5697-5219-4d57-ade1-0ab23f57494f");
+INSERT INTO O_OIDA
+	VALUES ("4695c3bc-1c58-420e-97a0-c1ad56e9cef8",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	0,
+	'to_id');
+INSERT INTO O_OIDA
+	VALUES ("8ed5d870-39da-4542-82d8-2dc90391a45a",
+	"929c5697-5219-4d57-ade1-0ab23f57494f",
+	0,
+	'from_id');
+INSERT INTO O_ID
+	VALUES (1,
+	"929c5697-5219-4d57-ade1-0ab23f57494f");
+INSERT INTO O_ID
+	VALUES (2,
+	"929c5697-5219-4d57-ade1-0ab23f57494f");
+INSERT INTO PE_PE
+	VALUES ("929c5697-5219-4d57-ade1-0ab23f57494f",
+	1,
+	"e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("e5199d8c-0eea-43c7-a954-b646002a0e4e",
+	"00000000-0000-0000-0000-000000000000",
+	"3abe39e2-91d5-4b5f-b5a3-872543f9f313",
+	'SQL_Synchronization',
+	'',
+	0,
+	'../SQL_Synchronization.xtuml');
