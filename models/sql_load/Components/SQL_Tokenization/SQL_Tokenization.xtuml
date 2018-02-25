@@ -319,7 +319,19 @@ INSERT INTO SPR_PS
 	VALUES ("b76938be-38a7-409b-ab3a-9b874ceb6c28",
 	'String',
 	'',
-	'',
+	'select any tokenizer from instances of Tokenizer;
+if empty tokenizer
+	create object instance tokenizer of Tokenizer;
+end if;
+
+create object instance string_source of String_Source;
+create object instance character_source of Character_Source;
+
+relate character_source to string_source across R2;
+
+string_source.value = param.value;
+
+generate Tokenizer1:Source_Available(id: character_source.id) to tokenizer;',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
@@ -337,7 +349,19 @@ INSERT INTO SPR_PS
 	VALUES ("fd666917-b2b6-48dc-a608-deba26243d44",
 	'File',
 	'',
-	'',
+	'select any tokenizer from instances of Tokenizer;
+if empty tokenizer
+	create object instance tokenizer of Tokenizer;
+end if;
+
+create object instance file_source of File_Source;
+create object instance character_source of Character_Source;
+relate character_source to file_source across R2;
+
+file_source.fd = FS::Open(filename: param.path, mode: File_Mode::Read);
+
+generate Tokenizer1:Source_Available(id: character_source.id) to tokenizer;
+',
 	1,
 	0);
 INSERT INTO C_EP_PROXY
