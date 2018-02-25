@@ -1562,8 +1562,10 @@ INSERT INTO SM_AH
 INSERT INTO SM_ACT
 	VALUES ("e187c6bf-4620-45a4-aef2-91e6749cb5b8",
 	"8b7808b2-d9b4-4d3e-85c3-a444fddee00c",
-	3,
-	'',
+	1,
+	'select one sql_link_parser related by self->SQL_Link_Parser[R9916];
+unrelate sql_link_parser from self across R9916;
+generate SQL_Link_Parser6:Semicolon() to sql_link_parser;',
 	'',
 	0);
 INSERT INTO GD_MD
