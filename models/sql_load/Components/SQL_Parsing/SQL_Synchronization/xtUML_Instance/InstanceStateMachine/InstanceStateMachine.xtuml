@@ -281,7 +281,32 @@ for each sql_to_link in sql_to_links
 		select any to_value related by sql_to_instance->SQL_Value[R5] 
 					where (selected.attribute_name == to_attr.name);
 
-		equals = equals and ::Compare_Values(lhs: from_value.id, rhs: to_value.id);
+		select one lhs_integer related by from_value->SQL_Integer[R12];
+		select one lhs_real related by from_value->SQL_Real[R12];
+		select one lhs_unique_id related by from_value->SQL_Unique_Id[R12];
+		select one lhs_string related by from_value->SQL_String[R12];
+		
+		select one rhs_integer related by to_value->SQL_Integer[R12];
+		select one rhs_real related by to_value->SQL_Real[R12];
+		select one rhs_unique_id related by to_value->SQL_Unique_Id[R12];
+		select one rhs_string related by to_value->SQL_String[R12];
+		
+		if not_empty lhs_integer and not_empty rhs_integer
+			equals = equals and (lhs_integer.value == rhs_integer.value);
+		
+		elif not_empty lhs_real and not_empty rhs_real
+			equals = equals and (lhs_real.value == rhs_real.value);
+			
+		elif not_empty lhs_unique_id and not_empty rhs_unique_id
+			equals = equals and (lhs_unique_id.value == rhs_unique_id.value);
+			
+		elif not_empty lhs_string and not_empty rhs_string
+			equals = equals and (lhs_string.value == rhs_string.value);
+			
+		else
+			equals = false; //unknown type, cannot compare values
+		end if;
+
 		select one from_attr_link related by from_attr_link->SQL_Attribute_Link[R13.''precedes''];
 		select one to_attr_link related by to_attr_link->SQL_Attribute_Link[R13.''precedes''];
 	end while;
@@ -289,7 +314,7 @@ for each sql_to_link in sql_to_links
 	if not equals
 		continue;
 	end if;
-		
+	
 	select one xtuml_from_instance related by sql_from_instance->xtUML_Instance[R301];
 	select one xtuml_to_instance related by sql_to_instance->xtUML_Instance[R301];
 	create object instance xtuml_connection of xtUML_Connection;
