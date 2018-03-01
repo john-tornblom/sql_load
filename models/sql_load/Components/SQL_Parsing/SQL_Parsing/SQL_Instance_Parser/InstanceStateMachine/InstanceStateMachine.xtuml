@@ -1093,8 +1093,7 @@ INSERT INTO SM_ACT
 	VALUES ("cc172b44-a671-4a5f-b279-f06c3373a268",
 	"09815ce5-e845-4325-afb9-1a579a04ebd7",
 	1,
-	'select any sql_value from instances of SQL_Value where (selected.id == param.id);
-select one sql_instance related by self->SQL_Instance[R9913];
+	'select one sql_instance related by self->SQL_Instance[R9913];
 select one sql_attribute related by self->SQL_Attribute[R9914];
 if empty sql_attribute
 	// Create an unnamed attribute that can hold the value
@@ -1116,8 +1115,11 @@ if empty sql_attribute
 	end if;
 end if;
 
+select one sql_parser related by self->SQL_Statement_Parser[R9909];
+select any sql_value related by sql_parser->SQL_Value[R9917] where (selected.id == param.id);
 relate sql_value to sql_attribute across R4;
 relate sql_value to sql_instance across R5;
+unrelate sql_value from sql_parser across R9917;
 
 //TODO: assert value type and attribute type match
 ',
@@ -2114,7 +2116,7 @@ INSERT INTO GD_NCS
 	VALUES ("b6f604f6-ad1f-45f1-90f8-ee84f022111e");
 INSERT INTO DIM_ND
 	VALUES (527.000000,
-	493.000000,
+	553.000000,
 	"b6f604f6-ad1f-45f1-90f8-ee84f022111e");
 INSERT INTO DIM_GE
 	VALUES (4981.000000,
