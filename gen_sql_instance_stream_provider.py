@@ -137,7 +137,7 @@ def main():
     mk_parameters(s_sync, key_letter=dt_string, instance_id=dt_unique_id,
                   name=dt_string, value=dt_string)
     
-    s_sync = mk_function(ep_pkg, Name='SQL_Instance_Stream_Unique_Id',
+    s_sync = mk_function(ep_pkg, Name='SQL_Instance_Stream_Set_Unique_Id',
                          Action_Semantics_internal=gen_set_unique_id(m1))
     mk_parameters(s_sync, key_letter=dt_string, instance_id=dt_unique_id,
                   name=dt_string, value=dt_unique_id)
