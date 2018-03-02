@@ -1681,7 +1681,8 @@ INSERT INTO SM_ACT
 	VALUES ("9d9ea5a3-c662-46c1-aa27-2147e321d206",
 	"8b7808b2-d9b4-4d3e-85c3-a444fddee00c",
 	1,
-	'',
+	'PROC::Assert(cond: param.name == "CREATE", 
+			 msg: "Expected CREATE, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_TAH
@@ -1709,7 +1710,8 @@ INSERT INTO SM_ACT
 	VALUES ("7ce255e1-5af2-40da-a648-4444b9bf9bc5",
 	"8b7808b2-d9b4-4d3e-85c3-a444fddee00c",
 	1,
-	'',
+	'PROC::Assert(cond: param.name == "ROP", 
+			 msg: "Expected ROP, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_TAH
@@ -1737,7 +1739,8 @@ INSERT INTO SM_ACT
 	VALUES ("abb05b36-8840-44b2-a9c3-6512732d015f",
 	"8b7808b2-d9b4-4d3e-85c3-a444fddee00c",
 	1,
-	'',
+	'PROC::Assert(cond: param.name == "REF_ID", 
+			 msg: "Expected REF_ID, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_TAH

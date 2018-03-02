@@ -859,7 +859,8 @@ INSERT INTO SM_ACT
 	VALUES ("6e13d20a-a126-439e-8a64-2ee9ad870665",
 	"23865111-80a4-4f44-83d8-9c1e75a08f1a",
 	1,
-	'//TODO: assert correct keyword',
+	'PROC::Assert(cond: param.name == "CREATE", 
+			 msg: "Expected CREATE, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_MOAH
@@ -873,7 +874,8 @@ INSERT INTO SM_ACT
 	VALUES ("7a5c8a36-2be8-48e6-809f-d04b5b5e2172",
 	"23865111-80a4-4f44-83d8-9c1e75a08f1a",
 	1,
-	'//TODO: assert correct keyword',
+	'PROC::Assert(cond: param.name == "TABLE", 
+			 msg: "Expected TABLE, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_MOAH
