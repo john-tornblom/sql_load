@@ -1114,7 +1114,6 @@ if empty sql_attribute
 	create object instance sql_attribute of SQL_Attribute;
 	sql_attribute.name = STR::From_Integer(value: cardinality sql_attributes);
 	relate sql_attribute to sql_class across R1;
-	//TODO: set type of implicit attribute
 	if not_empty last_sql_attribute
 		relate last_sql_attribute to sql_attribute across R2.''precedes'';
 	end if;
@@ -1125,8 +1124,6 @@ select any sql_value related by sql_parser->SQL_Value[R9917] where (selected.id 
 relate sql_value to sql_attribute across R4;
 relate sql_value to sql_instance across R5;
 unrelate sql_value from sql_parser across R9917;
-
-//TODO: assert value type and attribute type match
 ',
 	'',
 	0);
