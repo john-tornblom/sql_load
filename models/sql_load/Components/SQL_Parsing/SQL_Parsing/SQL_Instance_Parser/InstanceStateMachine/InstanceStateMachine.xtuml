@@ -1110,7 +1110,9 @@ if empty sql_attribute
 		select one sql_attribute related by sql_attribute->SQL_Attribute[R2.''precedes''];
 	end while;
 
+	select many sql_attributes related by sql_class->SQL_Attribute[R1];
 	create object instance sql_attribute of SQL_Attribute;
+	sql_attribute.name = STR::From_Integer(value: cardinality sql_attributes);
 	relate sql_attribute to sql_class across R1;
 	//TODO: set type of implicit attribute
 	if not_empty last_sql_attribute
