@@ -158,56 +158,52 @@ INSERT INTO SM_ACT
 relate self to sql_instance across R301;
 self.xtuml_id = Instance_Stream::New(key_letter: sql_instance.class_name);
 
-//integer attributes
-select many sql_integers related by sql_instance->SQL_Value[R5]->SQL_Integer[R12];
-for each sql_integer in sql_integers
-	select one sql_attribute related by sql_integer->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
+select many sql_values related by sql_instance->SQL_Value[R5];
+for each sql_value in sql_values
+	select one sql_attribute related by sql_value->SQL_Attribute[R4];
+	if sql_attribute.type == "BOOLEAN"
+		select one sql_integer related by sql_value->SQL_Integer[R12];
+		Instance_Stream::Set_Boolean(key_letter: sql_attribute.class_name, 
+									 instance_id: self.xtuml_id, 
+									 name: sql_value.attribute_name, 
+									 value: sql_integer.value != 0);
+								 
+	elif sql_attribute.type == "INTEGER"
+		select one sql_integer related by sql_value->SQL_Integer[R12];
+		Instance_Stream::Set_Integer(key_letter: sql_attribute.class_name, 
+									 instance_id: self.xtuml_id, 
+									 name: sql_value.attribute_name, 
+									 value: sql_integer.value);
+	elif sql_attribute.type == "REAL"
+		value = 0.0;
+		select one sql_integer related by sql_value->SQL_Integer[R12];
+		select one sql_real related by sql_value->SQL_Real[R12];
+		if not_empty sql_real
+			value = sql_real.value;
+		else
+			value = sql_integer.value;
+		end if;
+		Instance_Stream::Set_Real(key_letter: sql_attribute.class_name, 
+								  instance_id: self.xtuml_id, 
+								  name: sql_value.attribute_name, 
+								  value: value);
+									 
+	elif sql_attribute.type == "STRING"
+		select one sql_string related by sql_value->SQL_String[R12];
+		Instance_Stream::Set_String(key_letter: sql_attribute.class_name, 
+									 instance_id: self.xtuml_id, 
+									 name: sql_value.attribute_name, 
+									 value: sql_string.value);
+									 
+	elif sql_attribute.type == "UNIQUE_ID"
+		select one sql_unique_id related by sql_value->SQL_Unique_Id[R12];
+		Instance_Stream::Set_Unique_Id(key_letter: sql_attribute.class_name, 
+								  instance_id: self.xtuml_id, 
+								  name: sql_value.attribute_name, 
+								  value: sql_unique_id.value);
+	else
+		PROC::Assert(cond: false, msg: "Illegal type " + sql_attribute.type);
 	end if;
-	Instance_Stream::Set_Integer(key_letter: sql_attribute.class_name, 
-								 instance_id: self.xtuml_id, 
-								 name: sql_integer.attribute_name, 
-								 value: sql_integer.value);
-end for;
-
-//real attributes
-select many sql_reals related by sql_instance->SQL_Value[R5]->SQL_Real[R12];
-for each sql_real in sql_reals
-	select one sql_attribute related by sql_real->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_Real(key_letter: sql_attribute.class_name, 
-							  instance_id: self.xtuml_id, 
-							  name: sql_real.attribute_name, 
-							  value: sql_real.value);
-end for;
-
-//string attributes
-select many sql_strings related by sql_instance->SQL_Value[R5]->SQL_String[R12];
-for each sql_string in sql_strings
-	select one sql_attribute related by sql_string->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_String(key_letter: sql_attribute.class_name, 
-								instance_id: self.xtuml_id, 
-								name: sql_string.attribute_name, 
-								value: sql_string.value);
-end for;
-
-//unique_id attributes
-select many sql_unique_ids related by sql_instance->SQL_Value[R5]->SQL_Unique_Id[R12];
-for each sql_unique_id in sql_unique_ids
-	select one sql_attribute related by sql_unique_id->SQL_Value[R12]->SQL_Attribute[R4];
-	if sql_attribute.is_referential
-		continue;
-	end if;
-	Instance_Stream::Set_Unique_Id(key_letter: sql_attribute.class_name, 
-								   instance_id: self.xtuml_id, 
-								   name: sql_unique_id.attribute_name, 
-								   value: sql_unique_id.value);
 end for;
 
 /*
