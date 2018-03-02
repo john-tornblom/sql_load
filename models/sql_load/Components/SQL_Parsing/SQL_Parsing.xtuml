@@ -688,6 +688,24 @@ INSERT INTO C_EP_PROXY
 	'Set_String',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
+INSERT INTO SPR_REP
+	VALUES ("620bf025-316a-4444-800c-884b2a0e3e1c",
+	"62d325bc-33b3-42be-8aec-73b78ca7d730",
+	"5d86e2f3-6251-4a73-8224-b875dd53f848");
+INSERT INTO SPR_RO
+	VALUES ("620bf025-316a-4444-800c-884b2a0e3e1c",
+	'Set_Boolean',
+	'',
+	'',
+	3,
+	0);
+INSERT INTO C_EP_PROXY
+	VALUES ("62d325bc-33b3-42be-8aec-73b78ca7d730",
+	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
+	-1,
+	'Set_Boolean',
+	'',
+	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
 	"00000000-0000-0000-0000-000000000000",
