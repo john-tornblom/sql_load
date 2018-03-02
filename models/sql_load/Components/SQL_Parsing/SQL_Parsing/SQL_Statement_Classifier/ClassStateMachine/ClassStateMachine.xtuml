@@ -989,7 +989,6 @@ if param.name == "INSERT"
 	create object instance instance_parser of SQL_Instance_Parser;
 	relate parser to instance_parser across R9909;
 	relate parser to statement_classifier across R9910;
-	generate SQL_Statement_Parser1:Identifier(name: "INSERT") to parser;
 
 elif param.name != "CREATE"
 	PROC::Assert(cond: false, 
@@ -1177,6 +1176,7 @@ INSERT INTO SM_ACT
 	'select any statement_classifier from instances of SQL_Statement_Classifier;
 select one parser related by statement_classifier->SQL_Statement_Parser[R9910];
 if not_empty parser
+	generate SQL_Statement_Parser1:Identifier(name: "INSERT") to parser;
 	generate SQL_Statement_Parser1:Identifier(name: param.name) to parser;
 
 elif param.name == "TABLE"
