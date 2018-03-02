@@ -34,12 +34,6 @@ if param.key_letter == "${o_obj.Key_Lett}"
            .assign idx = idx + 1
          .end while
   end if;
-      .elif (s_dt.Name == "boolean")
-  if param.name == "${o_attr.Name}"
-    select any inst from instances of ${o_obj.Key_Lett} where (selected.${key.name} == param.instance_id);
-    inst.${o_attr.Name} = param.value != 0;
-    return;
-  end if;
       .elif (s_dt.DT_ID == s_dt_param.DT_ID)
   if param.name == "${o_attr.Name}"
     select any inst from instances of ${o_obj.Key_Lett} where (selected.${key.name} == param.instance_id);

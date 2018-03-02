@@ -36,6 +36,7 @@ def run_rsl(m, filename):
 gen_new = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.New.arc')
 gen_connect = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Connect.arc')
 gen_connect_using = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Connect_Using.arc')
+gen_set_boolean = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Set_Boolean.arc')
 gen_set_integer = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Set_Integer.arc')
 gen_set_real = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Set_Real.arc')
 gen_set_string = lambda m: run_rsl(m, arcdir + '/SQL_Instance_Stream.Set_String.arc')
@@ -95,6 +96,7 @@ def main():
     m1 = bridgepoint.load_metamodel(args, load_globals=True)
     m2 = ooaofooa.empty_model()
     
+    dt_boolean = m2.select_any('S_DT', where(Name='boolean'))
     dt_integer = m2.select_any('S_DT', where(Name='integer'))
     dt_real = m2.select_any('S_DT', where(Name='real'))
     dt_string = m2.select_any('S_DT', where(Name='string'))
@@ -121,6 +123,11 @@ def main():
     mk_parameters(s_sync, key_letter=dt_string)
     unrelate(s_sync, dt_void, 25)
     relate(s_sync, dt_unique_id, 25)
+    
+    s_sync = mk_function(ep_pkg, Name='SQL_Instance_Stream_Set_Boolean',
+                         Action_Semantics_internal=gen_set_boolean(m1))
+    mk_parameters(s_sync, key_letter=dt_string, instance_id=dt_unique_id,
+                  name=dt_string, value=dt_boolean)
     
     s_sync = mk_function(ep_pkg, Name='SQL_Instance_Stream_Set_Integer',
                          Action_Semantics_internal=gen_set_integer(m1))
