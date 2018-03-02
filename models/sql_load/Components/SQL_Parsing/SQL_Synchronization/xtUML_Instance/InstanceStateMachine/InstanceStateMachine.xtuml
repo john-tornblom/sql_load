@@ -163,6 +163,7 @@ for each sql_value in sql_values
 	select one sql_attribute related by sql_value->SQL_Attribute[R4];
 	if sql_attribute.type == "BOOLEAN"
 		select one sql_integer related by sql_value->SQL_Integer[R12];
+		PROC::Assert(cond: not_empty sql_integer, msg: "Type error");
 		Instance_Stream::Set_Boolean(key_letter: sql_attribute.class_name, 
 									 instance_id: self.xtuml_id, 
 									 name: sql_value.attribute_name, 
@@ -170,6 +171,7 @@ for each sql_value in sql_values
 								 
 	elif sql_attribute.type == "INTEGER"
 		select one sql_integer related by sql_value->SQL_Integer[R12];
+		PROC::Assert(cond: not_empty sql_integer, msg: "Type error");
 		Instance_Stream::Set_Integer(key_letter: sql_attribute.class_name, 
 									 instance_id: self.xtuml_id, 
 									 name: sql_value.attribute_name, 
@@ -181,6 +183,7 @@ for each sql_value in sql_values
 		if not_empty sql_real
 			value = sql_real.value;
 		else
+			PROC::Assert(cond: not_empty sql_integer, msg: "Type error");
 			value = sql_integer.value;
 		end if;
 		Instance_Stream::Set_Real(key_letter: sql_attribute.class_name, 
@@ -190,6 +193,7 @@ for each sql_value in sql_values
 									 
 	elif sql_attribute.type == "STRING"
 		select one sql_string related by sql_value->SQL_String[R12];
+		PROC::Assert(cond: not_empty sql_string, msg: "Type error");
 		Instance_Stream::Set_String(key_letter: sql_attribute.class_name, 
 									 instance_id: self.xtuml_id, 
 									 name: sql_value.attribute_name, 
@@ -197,6 +201,7 @@ for each sql_value in sql_values
 									 
 	elif sql_attribute.type == "UNIQUE_ID"
 		select one sql_unique_id related by sql_value->SQL_Unique_Id[R12];
+		PROC::Assert(cond: not_empty sql_unique_id, msg: "Type error");
 		Instance_Stream::Set_Unique_Id(key_letter: sql_attribute.class_name, 
 								  instance_id: self.xtuml_id, 
 								  name: sql_value.attribute_name, 
