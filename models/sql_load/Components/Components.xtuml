@@ -534,7 +534,7 @@ INSERT INTO GD_GE
 	"70bc7a58-0155-4536-90a6-dff68581e143",
 	94,
 	0,
-	'sql_load::Components::SQL_Loading::Port1::Character_Stream');
+	'sql_load::Components::SQL_Loading::Character_Stream::Character_Stream');
 INSERT INTO GD_CON
 	VALUES ("0d39af35-d148-439d-8cab-c218b90aa343",
 	"00000000-0000-0000-0000-000000000000");
@@ -634,7 +634,7 @@ INSERT INTO GD_GE
 	"5bf88b3c-a4e6-48b6-85a8-e085077e1596",
 	93,
 	0,
-	'sql_load::Components::SQL_Loading::Port2::SQL_Instance_Stream');
+	'sql_load::Components::SQL_Loading::Instance_Stream::SQL_Instance_Stream');
 INSERT INTO GD_CON
 	VALUES ("1eb0f943-72af-46ec-9d73-6c1fc0c916b8",
 	"00000000-0000-0000-0000-000000000000");
