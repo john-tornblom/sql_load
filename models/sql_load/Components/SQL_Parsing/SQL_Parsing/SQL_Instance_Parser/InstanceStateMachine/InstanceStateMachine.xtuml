@@ -999,7 +999,8 @@ INSERT INTO SM_ACT
 	VALUES ("39136466-7c76-4312-ae1a-b7ebf81e90c9",
 	"09815ce5-e845-4325-afb9-1a579a04ebd7",
 	1,
-	'//TODO: assert correct keyword',
+	'PROC::Assert(cond: param.name == "INSERT", 
+			 msg: "Expected INSERT, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_MOAH
@@ -1013,7 +1014,8 @@ INSERT INTO SM_ACT
 	VALUES ("1e80174f-f5ce-417f-ae43-d3e48498c837",
 	"09815ce5-e845-4325-afb9-1a579a04ebd7",
 	1,
-	'//TODO: assert correct keyword',
+	'PROC::Assert(cond: param.name == "INTO", 
+			 msg: "Expected INTO, got " + param.name);',
 	'',
 	0);
 INSERT INTO SM_MOAH
@@ -1064,7 +1066,8 @@ if not_empty first_sql_attribute
 	relate first_sql_attribute to self across R9914;
 end if;
 
-//TODO: assert correct keyword
+PROC::Assert(cond: param.name == "VALUES", 
+			 msg: "Expected VALUES, got " + param.name);
 ',
 	'',
 	0);
