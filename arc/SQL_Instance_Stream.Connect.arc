@@ -16,8 +16,8 @@
       .assign phrase = r_form.Txt_Phrs
     .//
     .elif ((not_empty r_super) and (not_empty r_sub))
-      .select any o_obj_from from instances of O_OBJ where (selected.Obj_ID == r_super.Obj_ID)
-      .select any o_obj_to from instances of O_OBJ where (selected.Obj_ID == r_sub.Obj_ID)
+      .select any o_obj_from from instances of O_OBJ where (selected.Obj_ID == r_sub.Obj_ID)
+      .select any o_obj_to from instances of O_OBJ where (selected.Obj_ID == r_super.Obj_ID)
     .//
     .end if
     .if ((not_empty o_obj_from) and (not_empty o_obj_to))
