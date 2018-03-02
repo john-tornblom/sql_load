@@ -303,7 +303,7 @@ INSERT INTO C_PO
 INSERT INTO C_IR
 	VALUES ("0fcdb5ee-dc86-45ee-8c6f-3033751e0224",
 	"09a35036-dc67-4be0-991d-26e9efcdea33",
-	"00000000-0000-0000-0000-000000000000",
+	"ebe95a00-4172-4147-9d71-0938d10ce3ca",
 	"5a7c7300-5e45-4e9e-a8b2-50f400913e2d");
 INSERT INTO C_P
 	VALUES ("0fcdb5ee-dc86-45ee-8c6f-3033751e0224",
@@ -377,6 +377,10 @@ INSERT INTO C_I_PROXY
 	'Character_Stream',
 	'',
 	'../../Interfaces/Character_Stream/Character_Stream.xtuml');
+INSERT INTO C_DG_PROXY
+	VALUES ("ebe95a00-4172-4147-9d71-0938d10ce3ca",
+	'-> SQL_Tokenization::Input::Character_Stream',
+	'../SQL_Loading/SQL_Loading.xtuml');
 INSERT INTO C_PO
 	VALUES ("b9b69463-6207-4d4c-a383-e2ed7c741f8c",
 	"85265af6-3955-4fe9-9275-ae08e4e4893f",

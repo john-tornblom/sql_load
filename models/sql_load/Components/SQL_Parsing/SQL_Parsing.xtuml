@@ -572,7 +572,7 @@ INSERT INTO C_PO
 INSERT INTO C_IR
 	VALUES ("5d86e2f3-6251-4a73-8224-b875dd53f848",
 	"cfc64ca3-674c-4fe4-97a6-a5aa66c40945",
-	"00000000-0000-0000-0000-000000000000",
+	"9f4e5e37-c560-4602-80f3-450de83adc7c",
 	"4b58c7aa-49e0-4879-90c7-2b18d8a39c0a");
 INSERT INTO C_R
 	VALUES ("5d86e2f3-6251-4a73-8224-b875dd53f848",
@@ -697,7 +697,7 @@ INSERT INTO SPR_RO
 	'Set_Boolean',
 	'',
 	'',
-	3,
+	1,
 	0);
 INSERT INTO C_EP_PROXY
 	VALUES ("62d325bc-33b3-42be-8aec-73b78ca7d730",
@@ -712,6 +712,10 @@ INSERT INTO C_I_PROXY
 	'SQL_Instance_Stream',
 	'',
 	'../../Interfaces/SQL_Instance_Stream/SQL_Instance_Stream.xtuml');
+INSERT INTO C_DG_PROXY
+	VALUES ("9f4e5e37-c560-4602-80f3-450de83adc7c",
+	'-> SQL_Parsing::Instance_Stream::SQL_Instance_Stream',
+	'../SQL_Loading/SQL_Loading.xtuml');
 INSERT INTO PE_PE
 	VALUES ("87713dd9-6486-4d1b-ab2c-50cc800cf593",
 	1,
