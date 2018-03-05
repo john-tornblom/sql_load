@@ -69,7 +69,7 @@ INSERT INTO GD_GE
 	"e1094271-9a35-4e0a-a8ee-eb00873db0e2",
 	100,
 	0,
-	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Tokenization');
+	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Tokenization:tokenizer');
 INSERT INTO GD_SHP
 	VALUES ("34a51873-9559-4605-9faa-f84fdb48d436");
 INSERT INTO GD_NCS
@@ -118,7 +118,7 @@ INSERT INTO GD_GE
 	"b9963814-6300-40fb-8950-4a1cf6a30e5d",
 	100,
 	0,
-	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Parsing');
+	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Parsing:parser');
 INSERT INTO GD_SHP
 	VALUES ("5f30e218-1677-43ef-bf6c-5a898a3f5aeb");
 INSERT INTO GD_NCS
@@ -162,7 +162,7 @@ INSERT INTO GD_GE
 	"6fe00214-7577-4896-99e5-274f1931ce56",
 	106,
 	0,
-	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Tokenization::Output::SQL_Token_Stream');
+	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Tokenization:tokenizer::Output::SQL_Token_Stream');
 INSERT INTO GD_CON
 	VALUES ("48f35491-598d-4fd5-b8d9-f41e91b6ab20",
 	"00000000-0000-0000-0000-000000000000");
@@ -262,7 +262,7 @@ INSERT INTO GD_GE
 	"029d9293-5613-4f92-b029-d78486575fe6",
 	105,
 	0,
-	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Parsing::Token_Stream::SQL_Token_Stream');
+	'sql_load::Components::SQL_Loading::sql_load::Components::SQL_Parsing:parser::Token_Stream::SQL_Token_Stream');
 INSERT INTO GD_CON
 	VALUES ("8b41d90b-5171-4890-a19b-557e3d8f1f58",
 	"00000000-0000-0000-0000-000000000000");
@@ -1015,8 +1015,8 @@ INSERT INTO CL_IC
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000",
 	0,
-	'',
-	'sql_load::Components::SQL_Tokenization',
+	'tokenizer',
+	'sql_load::Components::SQL_Tokenization:tokenizer',
 	'');
 INSERT INTO CL_POR
 	VALUES ("e1094271-9a35-4e0a-a8ee-eb00873db0e2",
@@ -1100,8 +1100,8 @@ INSERT INTO CL_IC
 	"00000000-0000-0000-0000-000000000000",
 	"00000000-0000-0000-0000-000000000000",
 	0,
-	'',
-	'sql_load::Components::SQL_Parsing',
+	'parser',
+	'sql_load::Components::SQL_Parsing:parser',
 	'');
 INSERT INTO CL_POR
 	VALUES ("b9963814-6300-40fb-8950-4a1cf6a30e5d",
